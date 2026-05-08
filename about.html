@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fair Travel Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation (copy from index.html) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-globe-africa text-2xl text-green-600"></i>
+                    <span class="text-xl font-bold text-gray-800">Fair Travel</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded hidden sm:inline-block">Tanzania</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 transition">Home</a>
+                    <a href="tours.html" class="text-gray-700 hover:text-green-600 transition">Tours</a>
+                    <a href="about.html" class="text-green-600 font-semibold transition">About</a>
+                    <a href="challenge.html" class="text-gray-700 hover:text-green-600 transition">Challenge</a>
+                    <a href="carbon-offset.html" class="text-gray-700 hover:text-green-600 transition">CO2 Offset</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition text-sm font-semibold">
+                        <i class="fas fa-calendar-check mr-2"></i>Book Now
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-green-600 py-2">Home</a>
+                <a href="tours.html" class="block text-gray-700 hover:text-green-600 py-2">Tours</a>
+                <a href="about.html" class="block text-green-600 py-2">About</a>
+                <a href="challenge.html" class="block text-gray-700 hover:text-green-600 py-2">Challenge</a>
+                <a href="carbon-offset.html" class="block text-gray-700 hover:text-green-600 py-2">CO2 Offset</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-green-600 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
+            <i class="fas fa-users text-4xl mb-3"></i>
+            <h1 class="text-4xl md:text-5xl font-bold">About Fair Travel</h1>
+            <p class="text-xl mt-2">Our story, mission, and commitment to Tanzania</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Our Story</h2>
+                    <div class="w-20 h-1 bg-green-600 mb-6"></div>
+                    <p class="text-gray-700 mb-4">Founded in 2010, Fair Travel Tanzania began with a simple idea: travel should benefit the places we visit, not exploit them. What started as a small team of passionate guides has grown into Tanzania's leading non-profit tour operator.</p>
+                    <p class="text-gray-700 mb-4">We've guided thousands of travelers to the summit of Kilimanjaro, across the Serengeti plains, and through the stone streets of Zanzibar — all while ensuring our footprint leaves only positive impact.</p>
+                    <p class="text-gray-700">Today, we're proud to be recommended by Bradt Travel Guides and trusted by adventurers worldwide.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600" alt="Team" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-xl">
+                    <i class="fas fa-calendar-alt text-4xl text-green-600 mb-3"></i>
+                    <div class="text-3xl font-bold text-green-700">15+</div>
+                    <p class="text-gray-600">Years of Experience</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl">
+                    <i class="fas fa-smile text-4xl text-green-600 mb-3"></i>
+                    <div class="text-3xl font-bold text-green-700">5,000+</div>
+                    <p class="text-gray-600">Happy Travelers</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl">
+                    <i class="fas fa-tree text-4xl text-green-600 mb-3"></i>
+                    <div class="text-3xl font-bold text-green-700">$250K+</div>
+                    <p class="text-gray-600">Donated to Conservation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600" alt="Founder" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Meet Our Founder</h2>
+                    <div class="w-20 h-1 bg-green-600 mb-6"></div>
+                    <p class="text-gray-700 mb-4">Mussa Mushi, founder and head guide, has over 20 years of experience leading expeditions across Tanzania. His deep local knowledge, commitment to safety, and passion for conservation drive everything we do.</p>
+                    <p class="text-gray-700">"We don't just show you Tanzania — we share our home with you, ensuring every footprint you leave makes a difference."</p>
+                    <div class="mt-6 flex items-center space-x-4">
+                        <i class="fas fa-quote-right text-3xl text-green-600"></i>
+                        <span class="italic text-gray-600">— Mussa Mushi, Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2026 Fair Travel Tanzania — your footprints matter.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

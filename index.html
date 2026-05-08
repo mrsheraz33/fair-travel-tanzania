@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Fair Travel Tanzania | Your Footprints Matter</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-globe-africa text-2xl text-green-600"></i>
+                    <span class="text-xl font-bold text-gray-800">Fair Travel</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded hidden sm:inline-block">Tanzania</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium transition">Home</a>
+                    <a href="tours.html" class="text-gray-700 hover:text-green-600 font-medium transition">Tours</a>
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 font-medium transition">About</a>
+                    <a href="challenge.html" class="text-gray-700 hover:text-green-600 font-medium transition">Challenge</a>
+                    <a href="carbon-offset.html" class="text-gray-700 hover:text-green-600 font-medium transition">CO2 Offset</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium transition">Contact</a>
+                </div>
+                
+                <!-- Book Now Button & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition text-sm font-semibold">
+                        <i class="fas fa-calendar-check mr-2"></i>Book Now
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-green-600 py-2">Home</a>
+                <a href="tours.html" class="block text-gray-700 hover:text-green-600 py-2">Tours</a>
+                <a href="about.html" class="block text-gray-700 hover:text-green-600 py-2">About</a>
+                <a href="challenge.html" class="block text-gray-700 hover:text-green-600 py-2">Challenge</a>
+                <a href="carbon-offset.html" class="block text-gray-700 hover:text-green-600 py-2">CO2 Offset</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-green-600 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <i class="fas fa-paw text-5xl mb-4 text-green-300"></i>
+            <h1 class="text-4xl md:text-7xl font-bold mb-4">Your Footprints <span class="text-green-300">Matter</span></h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-2xl mx-auto">Wildlife safaris, Kilimanjaro expeditions & Tanzanian adventures with transparent pricing & positive impact.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tours.html" class="bg-green-600 hover:bg-green-700 px-8 py-3 rounded-full font-semibold transition inline-flex items-center justify-center">
+                    <i class="fas fa-tree mr-2"></i>Explore Tours
+                </a>
+                <a href="challenge.html" class="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-full font-semibold transition inline-flex items-center justify-center">
+                    <i class="fas fa-trophy mr-2"></i>Challenge Any Offer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <i class="fas fa-bullseye text-4xl text-green-600 mb-3"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Mission</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-3"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We're redefining travel with purpose — every step you take gives back.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-scale">
+                    <i class="fas fa-smile text-4xl text-green-600 mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">100% Happy Guests</h3>
+                    <p class="text-gray-600">Your experience is our top priority.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-scale">
+                    <i class="fas fa-hand-peace text-4xl text-green-600 mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">100% Happy Staff</h3>
+                    <p class="text-gray-600">Fair salaries, no tipping dependency.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-scale">
+                    <i class="fas fa-tree text-4xl text-green-600 mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">100% Profits to Conservation</h3>
+                    <p class="text-gray-600">All net profits protect wildlife.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-scale">
+                    <i class="fas fa-leaf text-4xl text-green-600 mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">100% CO2 Offset</h3>
+                    <p class="text-gray-600">Locally offset your travel footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tours -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <i class="fas fa-compass text-4xl text-green-600 mb-3"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Popular Adventures</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-3"></div>
+                <p class="text-gray-600 mt-4">Authentic, safe & unforgettable Tanzanian experiences</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Safari -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600" alt="Safari" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Wildlife Safari</h3>
+                        <p class="text-gray-600 mb-3">Serengeti, Ngorongoro, Tarangire — see the Big Five.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 font-bold"><i class="fas fa-tag mr-1"></i>From $1,850</span>
+                            <a href="tour-detail.html" class="text-green-600 font-semibold hover:underline inline-flex items-center">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kilimanjaro -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600" alt="Kilimanjaro" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Mt. Kilimanjaro Trek</h3>
+                        <p class="text-gray-600 mb-3">7 routes, experienced guides, high success rate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 font-bold"><i class="fas fa-tag mr-1"></i>From $2,200</span>
+                            <a href="tour-detail.html" class="text-green-600 font-semibold hover:underline inline-flex items-center">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zanzibar -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600" alt="Zanzibar" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Zanzibar Escape</h3>
+                        <p class="text-gray-600 mb-3">Pristine beaches, Stone Town, spice tours.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 font-bold"><i class="fas fa-tag mr-1"></i>From $950</span>
+                            <a href="tour-detail.html" class="text-green-600 font-semibold hover:underline inline-flex items-center">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Banner -->
+    <section class="bg-gradient-to-r from-green-800 to-green-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <i class="fas fa-trophy text-5xl mb-4"></i>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">We Challenge Any Offer</h2>
+            <p class="text-lg mb-6 max-w-2xl mx-auto">Already got a quote from another company? Send it to us for a fair review and we'll beat it.</p>
+            <a href="challenge.html" class="bg-white text-green-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition inline-flex items-center">
+                <i class="fas fa-gavel mr-2"></i>Challenge Your Offer
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <i class="fas fa-star text-3xl text-green-600 mb-3"></i>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Fair Travel?</h2>
+                    <div class="w-20 h-1 bg-green-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6">Since 2010, we've been proving that travel can be both extraordinary and ethical.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-600 mt-1"></i><span>Local guides with fair, livable wages</span></li>
+                        <li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-600 mt-1"></i><span>No middlemen — direct & transparent pricing</span></li>
+                        <li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-600 mt-1"></i><span>100% of net profits go to conservation</span></li>
+                        <li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-600 mt-1"></i><span>CO2 emissions offset locally in Tanzania</span></li>
+                        <li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-600 mt-1"></i><span>Recommended by Bradt & TripAdvisor</span></li>
+                    </ul>
+                </div>
+                <div>
+                 
+                 <img 
+    src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80" 
+    alt="Local guide" 
+    class="rounded-xl shadow-lg w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <i class="fas fa-globe-africa text-2xl text-green-500"></i>
+                        <h3 class="text-2xl font-bold text-white">Fair Travel</h3>
+                    </div>
+                    <p>Tanzania's leading non-profit tour operator. Your footprints matter.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-400 transition"><i class="fas fa-chevron-right text-xs mr-2"></i>Home</a></li>
+                        <li><a href="tours.html" class="hover:text-green-400 transition"><i class="fas fa-chevron-right text-xs mr-2"></i>Tours</a></li>
+                        <li><a href="about.html" class="hover:text-green-400 transition"><i class="fas fa-chevron-right text-xs mr-2"></i>About</a></li>
+                        <li><a href="challenge.html" class="hover:text-green-400 transition"><i class="fas fa-chevron-right text-xs mr-2"></i>Challenge</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2 text-green-500"></i> info@fairtravel.com</li>
+                        <li><i class="fas fa-phone mr-2 text-green-500"></i> +255 123 456 789</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-green-500"></i> Arusha, Tanzania</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Newsletter</h4>
+                    <div class="flex">
+                        <input type="email" id="subscribe-email" placeholder="Your email" class="px-3 py-2 rounded-l-md w-full text-gray-900">
+                        <button id="subscribe-btn" class="bg-green-600 px-4 rounded-r-md hover:bg-green-700">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-green-400 text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                © 2026 Fair Travel Tanzania — your footprints matter.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

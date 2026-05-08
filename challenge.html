@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Any Offer - Fair Travel Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation (same pattern) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-globe-africa text-2xl text-green-600"></i>
+                    <span class="text-xl font-bold text-gray-800">Fair Travel</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded hidden sm:inline-block">Tanzania</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 transition">Home</a>
+                    <a href="tours.html" class="text-gray-700 hover:text-green-600 transition">Tours</a>
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    <a href="challenge.html" class="text-green-600 font-semibold transition">Challenge</a>
+                    <a href="carbon-offset.html" class="text-gray-700 hover:text-green-600 transition">CO2 Offset</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition text-sm font-semibold">
+                        <i class="fas fa-calendar-check mr-2"></i>Book Now
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-green-600 py-2">Home</a>
+                <a href="tours.html" class="block text-gray-700 hover:text-green-600 py-2">Tours</a>
+                <a href="about.html" class="block text-gray-700 hover:text-green-600 py-2">About</a>
+                <a href="challenge.html" class="block text-green-600 py-2">Challenge</a>
+                <a href="carbon-offset.html" class="block text-gray-700 hover:text-green-600 py-2">CO2 Offset</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-green-600 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-green-800 to-green-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
+            <i class="fas fa-trophy text-5xl mb-3"></i>
+            <h1 class="text-4xl md:text-5xl font-bold">Challenge Any Offer</h1>
+            <p class="text-xl mt-2">We'll beat any legitimate competitor's quote</p>
+        </div>
+    </section>
+
+    <!-- Challenge Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-8 rounded">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-yellow-600 text-xl mr-3"></i>
+                    <p class="text-gray-700">Already have an offer from another tour operator? Send it to us for a fair review. We guarantee better value, transparent pricing, and 100% non-profit impact.</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <i class="fas fa-check-circle text-green-600 text-3xl mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">What we offer</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Same or better itinerary</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Lower or equal price</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Transparent, no hidden fees</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> 100% profits to conservation</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <i class="fas fa-file-alt text-green-600 text-3xl mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">What to send us</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2 text-green-600"></i> Competitor's quote PDF/photo</li>
+                        <li><i class="fas fa-calendar mr-2 text-green-600"></i> Your preferred dates</li>
+                        <li><i class="fas fa-users mr-2 text-green-600"></i> Number of travelers</li>
+                        <li><i class="fas fa-phone mr-2 text-green-600"></i> Your contact details</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Challenge Form -->
+            <form id="challenge-form" class="bg-white shadow-xl rounded-xl p-8 border">
+                <h2 class="text-2xl font-bold mb-6">Submit Your Challenge</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                        <input type="text" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                        <input type="email" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                        <input type="tel" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Competitor Name</label>
+                        <input type="text" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 font-semibold mb-2">Competitor's Offer Details</label>
+                        <textarea rows="4" required placeholder="Describe the offer (price, itinerary, duration, inclusions...)" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 font-semibold mb-2">Upload Quote (PDF/Image)</label>
+                        <input type="file" accept="image/*,.pdf" class="w-full border rounded-lg px-4 py-2">
+                        <p class="text-sm text-gray-500 mt-1">Max 5MB. You can also email us directly.</p>
+                    </div>
+                </div>
+                <button type="submit" class="mt-6 bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition w-full md:w-auto">
+                    <i class="fas fa-paper-plane mr-2"></i>Submit Challenge
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2026 Fair Travel Tanzania — your footprints matter.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
