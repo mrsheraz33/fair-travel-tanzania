@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate | Tanzania Travel Volunteer</title>
+    <title>Update/Donation | Tanzania Travel Volunteer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,30 +14,26 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-3 md:py-4">
-
+                
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel
-                            Volunteer</span></span>
+                    <span class="text-lg md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel Volunteer</span></span>
                 </div>
-
-                <!-- Desktop Menu (hidden on mobile) -->
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
-                    <a href="programs.html"
-                        class="text-gray-700 hover:text-blue-600 font-medium transition">Programs</a>
-                    <a href="children.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Our
-                        Impact</a>
-                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Donate</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
+                    <a href="programs.html" class="text-gray-700 hover:text-blue-600 transition">Program</a>
+                    <a href="donate.html" class="text-blue-600 font-semibold transition">Donation</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-blue-600 transition">Galleries</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact Us</a>
                 </div>
-
-                <!-- Donate Button + Mobile Menu Toggle -->
+                
+                <!-- Donate Button + Mobile Menu -->
                 <div class="flex items-center space-x-3">
-                    <a href="donate.html"
-                        class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
+                    <a href="donate.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
                         Donate
                     </a>
                     <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
@@ -45,15 +41,15 @@
                     </button>
                 </div>
             </div>
-
-            <!-- Mobile Menu (hidden by default) -->
+            
+            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
                 <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Home</a>
-                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About</a>
-                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Programs</a>
-                <a href="children.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Our Impact</a>
-                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donate</a>
-                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact</a>
+                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About Us</a>
+                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Program</a>
+                <a href="donate.html" class="block text-blue-600 py-2 transition">Donation</a>
+                <a href="gallery.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Galleries</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -62,75 +58,292 @@
     <section class="bg-blue-800 text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
-            <i class="fas fa-donate text-4xl mb-3"></i>
-            <h1 class="text-4xl md:text-5xl font-bold">Make a Donation</h1>
-            <p class="text-xl mt-2">Your generosity changes lives</p>
+            <i class="fas fa-hand-holding-heart text-4xl mb-3"></i>
+            <h1 class="text-4xl md:text-5xl font-bold">DONATION</h1>
+            <p class="text-xl mt-2">Support our mission and make a difference</p>
         </div>
     </section>
 
-    <!-- Donation Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white shadow-xl rounded-xl p-8">
-                <h2 class="text-2xl font-bold mb-6 text-center">Choose Your Donation Amount</h2>
-                
-                <!-- Amount Buttons -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                    <button class="donation-amount bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition">$10</button>
-                    <button class="donation-amount bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition">$25</button>
-                    <button class="donation-amount bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition">$50</button>
-                    <button class="donation-amount bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition">$100</button>
-                </div>
-                
-                <!-- Custom Amount -->
-                <div class="mb-8">
-                    <label class="block text-gray-700 font-semibold mb-2">Custom Amount (USD)</label>
-                    <input type="number" id="custom-amount" placeholder="Enter amount" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
-                </div>
-                
-                <!-- Donation Purpose -->
-                <div class="mb-8">
-                    <label class="block text-gray-700 font-semibold mb-2">Donation Purpose</label>
-                    <select class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
-                        <option>Where most needed</option>
-                        <option>Children's Education (Baron, Brayden, Blessing)</option>
-                        <option>Healthcare Programs</option>
-                        <option>Community Development</option>
-                    </select>
-                </div>
-                
-                <!-- Payment Gateways -->
-                <div class="border-t pt-6">
-                    <h3 class="text-xl font-bold mb-4 text-center">Secure Payment via</h3>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <!-- PayPal Button -->
-                        <a href="https://www.paypal.com/donate" target="_blank" class="bg-[#0070ba] text-white px-8 py-3 rounded-full font-bold hover:bg-[#005a9c] transition text-center inline-flex items-center justify-center">
-                            <i class="fab fa-paypal mr-2 text-xl"></i> Donate with PayPal
-                        </a>
-                        <!-- Wise Button -->
-                        <a href="https://wise.com/donate" target="_blank" class="bg-[#9e5fba] text-white px-8 py-3 rounded-full font-bold hover:bg-[#7b4a9e] transition text-center inline-flex items-center justify-center">
-                            <i class="fas fa-globe mr-2"></i> Donate with Wise
-                        </a>
-                    </div>
-                    <p class="text-center text-gray-500 text-sm mt-4">100% of your donation goes directly to our programs. Tanzania Travel Volunteer is a non-profit organization.</p>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
             
-            <!-- Impact Message -->
-            <div class="mt-8 bg-green-50 rounded-xl p-6 text-center">
-                <i class="fas fa-tree text-3xl text-green-600 mb-2"></i>
-                <h3 class="text-xl font-bold mb-2">Your Impact</h3>
-                <p class="text-gray-600">$10 provides school supplies for one child. $50 provides uniforms for three children. $100 covers school fees for one month.</p>
+            <!-- MEET YOUR EXPERTISE Section -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <i class="fas fa-user-tie text-4xl text-blue-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">MEET YOUR EXPERTISE</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mt-3"></div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="grid md:grid-cols-3 gap-6 items-center">
+                        <div class="md:col-span-1">
+                            <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=400" alt="Mussa Mushi" class="rounded-xl shadow-lg w-full">
+                        </div>
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl font-bold text-blue-700 mb-2">Mussa Mushi</h3>
+                            <p class="text-gray-700 mb-3"><strong>Founder of Tanzania Travel Volunteer</strong></p>
+                            <p class="text-gray-600">Mussa Mushi is the founder of Tanzania Travel Volunteer, an organization aimed at providing volunteering opportunities and community development initiatives in Tanzania. Tanzania Travel Volunteer focuses on projects that support local communities through <strong>education, healthcare, and sustainable development efforts</strong>.</p>
+                            <p class="text-gray-600 mt-3">Mussa Mushi's work involves coordinating with international volunteers and connecting them with projects that match their skills and interests, which can range from teaching and healthcare to environmental conservation. The mission is to encourage <strong>cultural exchange</strong> and promote <strong>positive impacts</strong> on local communities through volunteer work.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- DONATION Section with Payment Methods -->
+            <div class="mb-16" id="donation">
+                <div class="text-center mb-8">
+                    <i class="fas fa-donate text-4xl text-green-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">DONATION</h2>
+                    <div class="w-20 h-1 bg-green-600 mx-auto mt-3"></div>
+                    <p class="text-gray-700 text-lg mt-4">Donate today to have a direct impact on a young person's life.</p>
+                </div>
+                
+                <!-- Payment Options Cards -->
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- PayPal Card -->
+                    <div class="bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition">
+                        <div class="bg-[#0070ba] text-white px-6 py-4 text-center">
+                            <i class="fab fa-paypal text-3xl mr-2"></i>
+                            <h3 class="text-xl font-bold inline">PayPal</h3>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p class="text-gray-600 mb-4">Secure and fast donation via PayPal</p>
+                            <a href="https://www.paypal.com/donate" target="_blank" class="inline-block bg-[#0070ba] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#005a9c] transition w-full">
+                                <i class="fab fa-paypal mr-2"></i> Donate with PayPal
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Wise Card -->
+                    <div class="bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition">
+                        <div class="bg-[#9e5fba] text-white px-6 py-4 text-center">
+                            <i class="fas fa-globe text-3xl mr-2"></i>
+                            <h3 class="text-xl font-bold inline">Wise</h3>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p class="text-gray-600 mb-4">Low-cost international transfers</p>
+                            <a href="https://wise.com/donate" target="_blank" class="inline-block bg-[#9e5fba] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7b4a9e] transition w-full">
+                                <i class="fas fa-globe mr-2"></i> Donate with Wise
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bank Transfer Details -->
+                <div class="bg-white shadow-xl rounded-xl overflow-hidden">
+                    <div class="bg-green-600 text-white px-6 py-3">
+                        <h3 class="text-xl font-bold"><i class="fas fa-university mr-2"></i> Bank Transfer Details</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">Choose to transfer through Bank Account:</p>
+                        
+                        <div class="bg-gray-50 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-lg text-blue-700 mb-3">Bank Details for International Wire Transfer</h4>
+                            <div class="grid md:grid-cols-2 gap-3 text-sm">
+                                <div><span class="font-semibold">Account Name:</span> Mussa Bashiri Mushi</div>
+                                <div><span class="font-semibold">Bank Name:</span> Equity Bank Tanzania Ltd</div>
+                                <div><span class="font-semibold">Branch:</span> Moshi Branch</div>
+                                <div><span class="font-semibold">Branch Code:</span> 3012</div>
+                                <div><span class="font-semibold">Bank Code:</span> 047</div>
+                                <div><span class="font-semibold">Account Number:</span> 3012111803226</div>
+                                <div><span class="font-semibold">IBAN Number:</span> DE48502109004116931007</div>
+                                <div><span class="font-semibold">SWIFT / BIC Code:</span> EQBLTZTZ</div>
+                                <div class="md:col-span-2"><span class="font-semibold">Bank Address:</span> Aghakan Street, NSSF Building, Ground Floor, Moshi – Kilimanjaro, Tanzania</div>
+                                <div class="md:col-span-2"><span class="font-semibold">Account Currency:</span> USD</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-50 rounded-lg p-4 text-center">
+                            <i class="fas fa-heart text-green-600 text-2xl mb-2"></i>
+                            <p class="font-semibold">Thank you!</p>
+                            <p>From the whole team of Tanzania Travel Volunteer, we would like to thank you for your contribution!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACCOMMODATION Section -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <i class="fas fa-bed text-4xl text-blue-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">Accommodation</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mt-3"></div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <p class="text-gray-700 text-lg">We can offer <strong>basic accommodation on site in Moshi</strong>.</p>
+                </div>
+            </div>
+
+            <!-- VISIT Section -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <i class="fas fa-tree text-4xl text-green-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">VISIT</h2>
+                    <div class="w-20 h-1 bg-green-600 mx-auto mt-3"></div>
+                    <p class="text-xl font-semibold text-blue-700 mt-2">Karibu Tanzania!</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <p class="text-gray-700 mb-4">We welcome visitors to our centre in Moshi, Northern Tanzania. Enjoy a tour of the centre, learning more about our programmes, meeting the students and staff. Taste a traditional Tanzanian meal while sharing lunch with our young beneficiaries.</p>
+                    <p class="text-gray-700">If you would like to visit the home of one of our youth, this can be arranged through our Social Worker and is a wonderful opportunity to understand more about the Tanzanian way of life.</p>
+                </div>
+            </div>
+
+            <!-- SAFARI TIME Section -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <i class="fas fa-safari text-4xl text-yellow-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">SAFARI TIME</h2>
+                    <div class="w-20 h-1 bg-yellow-600 mx-auto mt-3"></div>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-6 mb-6">
+                    <p class="text-gray-700">In partnership with our friends at <strong>Kilimanjaro Safari Bookings</strong> we show our visitors the highlights of Tanzania, including <strong>Mount Kilimanjaro Trekking, Mount Meru Trekking</strong> the plains of the Serengeti, the rich wildlife of the Ngorongoro Crater and the aqua blue sea of the exotic spice islands of Zanzibar.</p>
+                    <p class="text-gray-700 mt-3"><strong>Kilimanjaro Safari Bookings</strong> donate generously to Tanzania Travel Volunteer, providing much needed general support. <strong class="text-green-700">$50 per client is gifted directly to Tanzania Travel Volunteer</strong></p>
+                    <p class="text-gray-700 mt-3">If you want to learn more about a trip of a lifetime to Tanzania, please <a href="contact.html" class="text-blue-600 font-semibold">contact us</a>.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500" alt="Kilimanjaro Trekking" class="rounded-xl shadow-lg w-full h-48 object-cover mb-2">
+                        <p class="font-semibold">KILIMANJARO TREKKING</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1589301760014-6d6d8b8f8e8a?w=500" alt="Mount Meru Trekking" class="rounded-xl shadow-lg w-full h-48 object-cover mb-2">
+                        <p class="font-semibold">MOUNT MERU TREKKING</p>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <p class="text-gray-700 italic">FOR MORE DETAILS ABOUT ADVENTURES IN TANZANIA TALK TO OUR EXPERT</p>
+                </div>
+            </div>
+
+            <!-- OUR WISH LIST Section -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <i class="fas fa-list-check text-4xl text-blue-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">OUR WISH LIST</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mt-3"></div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <p class="text-gray-700 mb-4">If you have some space in your luggage – here are some items that we ALWAYS need! All other goods, including stationery, uniforms and food we support Arusha based suppliers.</p>
+                    <div class="grid md:grid-cols-2 gap-3">
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> School Bags (Day pack)</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> White Board Pens</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Sports Shoes (Trainers)</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Black School Shoes</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Flash Drives (USB)</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Scientific Calculators</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Art Materials</li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Unlocked Mobile Phones</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Watches</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Dictionaries (English-English)</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Laptops for university students</li>
+                            <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Clothing for young men and women (small/medium sizes)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div>
+                <div class="text-center mb-8">
+                    <i class="fas fa-envelope text-4xl text-blue-600 mb-2"></i>
+                    <h2 class="text-3xl font-bold">Contact Us</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mt-3"></div>
+                </div>
+                <div class="bg-white shadow-xl rounded-xl p-8">
+                    <form id="contact-form">
+                        <div class="grid md:grid-cols-2 gap-6 mb-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Name <span class="text-red-500">*</span></label>
+                                <input type="text" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email <span class="text-red-500">*</span></label>
+                                <input type="email" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea rows="5" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition w-full">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2026 Tanzania Travel Volunteer One Heart, Many Lives.</p>
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
+                        <h3 class="text-sm font-bold text-white">Tanzania Travel Volunteer</h3>
+                    </div>
+                    <p>Travel with purpose, leave a positive impact.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="programs.html" class="hover:text-blue-400 transition">Program</a></li>
+                        <li><a href="donate.html" class="hover:text-blue-400 transition">Donation</a></li>
+                        <li><a href="gallery.html" class="hover:text-blue-400 transition">Galleries</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2 text-blue-500"></i> umojavolunteertanzania@gmail.com</li>
+                        <li><i class="fas fa-phone mr-2 text-blue-500"></i> +255 622 691 910</li>
+                        <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> +255 622 691 910</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Mbokomu KDC Moshi, Kilimanjaro, Tanzania</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/tanzaniaheartvolunteer" class="text-gray-400 hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/255622691910?text=Hello" target="_blank" class="text-gray-400 hover:text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                © 2026 Tanzania Travel Volunteer — Travel with purpose, leave a positive impact.
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you within 24 hours.');
+                this.reset();
+            });
+        }
+        
+        // Back button
+        const backBtn = document.getElementById('back-btn');
+        if (backBtn) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.history.back();
+            });
+        }
+    </script>
 </body>
 </html>

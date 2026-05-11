@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs | Tanzania Travel Volunteer</title>
+    <title>Program | Tanzania Travel Volunteer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,30 +14,26 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-3 md:py-4">
-
+                
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel
-                            Volunteer</span></span>
+                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel Volunteer</span></span>
                 </div>
-
-                <!-- Desktop Menu (hidden on mobile) -->
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
-                    <a href="programs.html"
-                        class="text-gray-700 hover:text-blue-600 font-medium transition">Programs</a>
-                    <a href="children.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Our
-                        Impact</a>
-                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Donate</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
+                    <a href="programs.html" class="text-blue-600 font-semibold transition">Program</a>
+                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 transition">Donation</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-blue-600 transition">Galleries</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact Us</a>
                 </div>
-
-                <!-- Donate Button + Mobile Menu Toggle -->
+                
+                <!-- Donate Button + Mobile Menu -->
                 <div class="flex items-center space-x-3">
-                    <a href="donate.html"
-                        class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
+                    <a href="donate.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
                         Donate
                     </a>
                     <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
@@ -45,105 +41,159 @@
                     </button>
                 </div>
             </div>
-
-            <!-- Mobile Menu (hidden by default) -->
+            
+            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
                 <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Home</a>
-                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About</a>
-                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Programs</a>
-                <a href="children.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Our Impact</a>
-                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donate</a>
-                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact</a>
+                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About Us</a>
+                <a href="programs.html" class="block text-blue-600 py-2 transition">Program</a>
+                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donation</a>
+                <a href="gallery.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Galleries</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact Us</a>
             </div>
         </div>
     </nav>
-
 
     <!-- Page Header -->
     <section class="bg-blue-800 text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
             <i class="fas fa-hands-helping text-4xl mb-3"></i>
-            <h1 class="text-4xl md:text-5xl font-bold">Volunteer Programs</h1>
-            <p class="text-xl mt-2">Choose your impact area</p>
+            <h1 class="text-4xl md:text-5xl font-bold">PROGRAM</h1>
+            <p class="text-xl mt-2">Tanzania Travel Volunteer — Moshi, Tanzania</p>
         </div>
     </section>
 
-    <!-- Programs Grid -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Education -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600" alt="Education" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <i class="fas fa-graduation-cap text-3xl text-blue-600 mb-3"></i>
-                        <h3 class="text-2xl font-bold mb-2">Education Program</h3>
-                        <p class="text-gray-600 mb-3">Teach English, math, and science. Help children build a brighter future.</p>
-                        <ul class="space-y-1 text-sm mb-4">
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Teaching assistance</li>
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> School construction</li>
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> After-school activities</li>
-                        </ul>
-                        <a href="contact.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            Apply Now <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+    <!-- Main Program Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            
+            <!-- Intro Section -->
+            <div class="text-center mb-12">
+                <p class="text-gray-700 text-lg">Tanzania Travel Volunteer offers immersive volunteer programs in and around <strong>Moshi, Tanzania</strong>, providing opportunities to contribute to meaningful community development projects. Our programs focus on creating sustainable impact in areas such as <strong>education, healthcare, environmental conservation, and community empowerment</strong>.</p>
+            </div>
+
+            <!-- Ethos Box -->
+            <div class="bg-blue-50 rounded-xl p-6 mb-12 border-l-4 border-blue-600">
+                <p class="text-gray-800">Volunteers work alongside local communities, gaining firsthand experience of Tanzanian culture while making a real difference. We prioritize <strong>ethical and responsible volunteering</strong>, ensuring that our projects are community-led and aligned with local needs. Whether you're interested in teaching, healthcare, conservation, or other areas, Tanzania Travel Volunteer provides a platform for a transformative and impactful volunteer experience in a beautiful and culturally rich setting.</p>
+            </div>
+
+            <!-- Key Points Grid -->
+            <h2 class="text-3xl font-bold text-center mb-8">Program Highlights</h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fas fa-map-marker-alt text-3xl text-blue-600"></i>
+                        <h3 class="text-xl font-bold">1. Location</h3>
                     </div>
+                    <p class="text-gray-600">The program is based in <strong>Moshi</strong>, a town at the foot of Mount Kilimanjaro, offering beautiful natural scenery and a rich cultural environment.</p>
                 </div>
                 
-                <!-- Healthcare -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
-                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600" alt="Healthcare" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <i class="fas fa-hospital-user text-3xl text-blue-600 mb-3"></i>
-                        <h3 class="text-2xl font-bold mb-2">Healthcare Program</h3>
-                        <p class="text-gray-600 mb-3">Support local clinics, health education, and community wellness.</p>
-                        <ul class="space-y-1 text-sm mb-4">
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Health screenings</li>
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Hygiene education</li>
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Clinic assistance</li>
-                        </ul>
-                        <a href="contact.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            Apply Now <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fas fa-hands-helping text-3xl text-green-600"></i>
+                        <h3 class="text-xl font-bold">2. Volunteer Opportunities</h3>
                     </div>
+                    <p class="text-gray-600">Participants can engage in various projects, including <strong>education, healthcare, women's empowerment, and community development</strong>. Specific tasks may include teaching, assisting in healthcare facilities, or participating in women's groups.</p>
                 </div>
                 
-                <!-- Community Development -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600" alt="Community" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <i class="fas fa-hand-holding-heart text-3xl text-blue-600 mb-3"></i>
-                        <h3 class="text-2xl font-bold mb-2">Community Development</h3>
-                        <p class="text-gray-600 mb-3">Work on sustainable projects that empower local communities.</p>
-                        <ul class="space-y-1 text-sm mb-4">
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Women's empowerment</li>
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Agriculture projects</li>
-                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Infrastructure support</li>
-                        </ul>
-                        <a href="contact.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            Apply Now <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fas fa-globe-africa text-3xl text-yellow-600"></i>
+                        <h3 class="text-xl font-bold">3. Cultural Immersion</h3>
                     </div>
+                    <p class="text-gray-600">Volunteers have the opportunity to immerse themselves in Tanzanian culture through <strong>home stays, local excursions, language lessons, and participation in cultural events</strong>.</p>
                 </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fas fa-mountain text-3xl text-purple-600"></i>
+                        <h3 class="text-xl font-bold">4. Adventure and Exploration</h3>
+                    </div>
+                    <p class="text-gray-600">Being in close proximity to <strong>Mount Kilimanjaro</strong> and several national parks, volunteers can explore the natural beauty of Tanzania through hiking, safaris, and tours to surrounding areas.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fas fa-chart-line text-3xl text-blue-600"></i>
+                        <h3 class="text-xl font-bold">5. Skills and Impact</h3>
+                    </div>
+                    <p class="text-gray-600">Volunteers can gain valuable skills in <strong>cross-cultural communication, project management, and leadership</strong> while making a meaningful impact in local communities.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fas fa-life-ring text-3xl text-green-600"></i>
+                        <h3 class="text-xl font-bold">6. Support and Guidance</h3>
+                    </div>
+                    <p class="text-gray-600">The program typically offers comprehensive support to volunteers, including <strong>pre-departure information, on-site coordination, and emergency assistance</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Important Note -->
+            <div class="bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-500 mb-8">
+                <div class="flex items-start space-x-3">
+                    <i class="fas fa-exclamation-triangle text-yellow-600 text-xl mt-1"></i>
+                    <p class="text-gray-800">Participants should be prepared for <strong>flexible work environments</strong> and open to adapting to different cultural norms. Such programs often require a commitment to understanding and respecting local traditions and practices.</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="bg-blue-600 text-white rounded-2xl p-8 text-center">
+                <i class="fas fa-envelope text-4xl mb-3"></i>
+                <h2 class="text-2xl font-bold mb-2">Ready to Volunteer?</h2>
+                <p class="mb-4">Join us in Moshi, Tanzania and make a lasting impact!</p>
+                <a href="contact.html" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center">
+                    <i class="fas fa-paper-plane mr-2"></i>Apply Now
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="bg-gray-50 py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to Make an Impact?</h2>
-            <p class="text-gray-600 mb-6">Join us as a volunteer and transform lives — including your own.</p>
-            <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition inline-flex items-center">
-                <i class="fas fa-envelope mr-2"></i>Contact Us to Apply
-            </a>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2026 Tanzania Travel Volunteer One Heart, Many Lives.</p>
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
+                        <h3 class="text-xl font-bold text-white">Tanzania Travel Volunteer</h3>
+                    </div>
+                    <p>Travel with purpose, leave a positive impact.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="programs.html" class="hover:text-blue-400 transition">Program</a></li>
+                        <li><a href="donate.html" class="hover:text-blue-400 transition">Donation</a></li>
+                        <li><a href="gallery.html" class="hover:text-blue-400 transition">Galleries</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2 text-blue-500"></i> umojavolunteertanzania@gmail.com</li>
+                        <li><i class="fas fa-phone mr-2 text-blue-500"></i> +255 622 691 910</li>
+                        <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> +255 622 691 910</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Mbokomu KDC Moshi, Kilimanjaro, Tanzania</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Follow Us</h4>
+                    <div class="flex space-x-4">
+                       
+                        <a href="https://www.facebook.com/tanzaniaheartvolunteer" class="text-gray-400 hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a  href="https://wa.me/255622691910?text=Hello" target="_blank"  class="text-gray-400 hover:text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                © 2026 Tanzania Travel Volunteer — Travel with purpose, leave a positive impact.
+            </div>
         </div>
     </footer>
 
