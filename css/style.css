@@ -1,4 +1,4 @@
-/* Google Fonts - Professional Font */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -22,12 +22,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #16a34a;
+    background: #1e3a5f;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #15803d;
+    background: #0f2b4a;
 }
 
 /* Hover Effects */
@@ -36,30 +36,19 @@ body {
 }
 
 .hover-scale:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Background */
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1498019559366-a1c0c0e4c5e4?w=1600');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-/* Card Image Container */
-.card-img {
-    height: 250px;
-    object-fit: cover;
-}
-
-/* Mobile Menu Animation */
-.mobile-menu {
-    transition: all 0.3s ease;
-}
-
-/* Back Button Style */
+/* Back Button */
 .back-btn {
     display: inline-flex;
     align-items: center;
@@ -71,13 +60,18 @@ body {
     transform: translateX(-5px);
 }
 
-/* Form Focus Effects */
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    ring: 2px solid #16a34a;
+/* Donation Cards */
+.donation-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* Loading Animation */
+.donation-card:hover {
+    border-color: #1e3a5f;
+    background-color: #f8fafc;
+}
+
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;

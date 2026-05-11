@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Tanzania Travel Volunteer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3 md:py-4">
+
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
+                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel
+                            Volunteer</span></span>
+                </div>
+
+                <!-- Desktop Menu (hidden on mobile) -->
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="programs.html"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition">Programs</a>
+                    <a href="children.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Our
+                        Impact</a>
+                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Donate</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                </div>
+
+                <!-- Donate Button + Mobile Menu Toggle -->
+                <div class="flex items-center space-x-3">
+                    <a href="donate.html"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
+                        Donate
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Home</a>
+                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About</a>
+                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Programs</a>
+                <a href="children.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Our Impact</a>
+                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donate</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="bg-blue-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
+            <i class="fas fa-hands-helping text-4xl mb-3"></i>
+            <h1 class="text-4xl md:text-5xl font-bold">Volunteer Programs</h1>
+            <p class="text-xl mt-2">Choose your impact area</p>
+        </div>
+    </section>
+
+    <!-- Programs Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Education -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600" alt="Education" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Education Program</h3>
+                        <p class="text-gray-600 mb-3">Teach English, math, and science. Help children build a brighter future.</p>
+                        <ul class="space-y-1 text-sm mb-4">
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Teaching assistance</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> School construction</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> After-school activities</li>
+                        </ul>
+                        <a href="contact.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
+                            Apply Now <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Healthcare -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600" alt="Healthcare" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <i class="fas fa-hospital-user text-3xl text-blue-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Healthcare Program</h3>
+                        <p class="text-gray-600 mb-3">Support local clinics, health education, and community wellness.</p>
+                        <ul class="space-y-1 text-sm mb-4">
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Health screenings</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Hygiene education</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Clinic assistance</li>
+                        </ul>
+                        <a href="contact.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
+                            Apply Now <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Community Development -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600" alt="Community" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <i class="fas fa-hand-holding-heart text-3xl text-blue-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Community Development</h3>
+                        <p class="text-gray-600 mb-3">Work on sustainable projects that empower local communities.</p>
+                        <ul class="space-y-1 text-sm mb-4">
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Women's empowerment</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Agriculture projects</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Infrastructure support</li>
+                        </ul>
+                        <a href="contact.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
+                            Apply Now <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Make an Impact?</h2>
+            <p class="text-gray-600 mb-6">Join us as a volunteer and transform lives — including your own.</p>
+            <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition inline-flex items-center">
+                <i class="fas fa-envelope mr-2"></i>Contact Us to Apply
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2026 Tanzania Travel Volunteer One Heart, Many Lives.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

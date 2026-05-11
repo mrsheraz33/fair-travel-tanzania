@@ -1,6 +1,5 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu button
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
@@ -10,14 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close mobile menu on window resize
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 768 && mobileMenu) {
             mobileMenu.classList.add('hidden');
         }
     });
     
-    // Back button functionality
+    // Back button
     const backBtn = document.getElementById('back-btn');
     if (backBtn) {
         backBtn.addEventListener('click', function(e) {
@@ -26,35 +24,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form submission handling (Contact page)
+    // Donation amount selection
+    const donationAmounts = document.querySelectorAll('.donation-amount');
+    const customAmount = document.getElementById('custom-amount');
+    
+    donationAmounts.forEach(btn => {
+        btn.addEventListener('click', function() {
+            donationAmounts.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
+            donationAmounts.forEach(b => b.classList.add('bg-gray-100', 'text-gray-800'));
+            this.classList.remove('bg-gray-100', 'text-gray-800');
+            this.classList.add('bg-blue-600', 'text-white');
+            if (customAmount) customAmount.value = '';
+        });
+    });
+    
+    // Contact form
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name')?.value;
-            const email = document.getElementById('email')?.value;
-            const message = document.getElementById('message')?.value;
-            
-            if (name && email && message) {
-                alert('Thank you! We will get back to you within 24 hours.');
-                this.reset();
-            } else {
-                alert('Please fill all fields.');
-            }
-        });
-    }
-    
-    // Challenge form submission
-    const challengeForm = document.getElementById('challenge-form');
-    if (challengeForm) {
-        challengeForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Your offer has been submitted! We will review and contact you within 48 hours.');
+            alert('Thank you for your message! We will get back to you within 24 hours.');
             this.reset();
         });
     }
     
-    // Newsletter subscription
+    // Newsletter
     const subscribeBtn = document.getElementById('subscribe-btn');
     const subscribeEmail = document.getElementById('subscribe-email');
     
@@ -68,18 +62,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#') {
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    });
 });
