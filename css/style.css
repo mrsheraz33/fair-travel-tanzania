@@ -1,4 +1,4 @@
-/* Google Fonts */
+/* Google Fonts - Professional Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -22,12 +22,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1e3a5f;
+    background: #16a34a;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0f2b4a;
+    background: #15803d;
 }
 
 /* Hover Effects */
@@ -42,7 +42,7 @@ body {
 
 /* Hero Background */
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -60,17 +60,6 @@ body {
     transform: translateX(-5px);
 }
 
-/* Donation Cards */
-.donation-card {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.donation-card:hover {
-    border-color: #1e3a5f;
-    background-color: #f8fafc;
-}
-
 /* Animation */
 @keyframes fadeIn {
     from {
@@ -85,4 +74,14 @@ body {
 
 .fade-in {
     animation: fadeIn 0.6s ease forwards;
+}
+
+/* Donation Card */
+.donation-card {
+    transition: all 0.3s ease;
+}
+
+.donation-card:hover {
+    border-color: #16a34a;
+    background-color: #f8fafc;
 }

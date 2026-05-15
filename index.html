@@ -3,271 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Tanzania Travel Volunteer</title>
+    <title>Tanzania Travel Volunteer | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        :root {
+            --primary: #16a34a;
+        }
+        .tail-container { font-family: 'Poppins', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #16a34a;
+            border-bottom: 2px solid #16a34a;
+        }
+    </style>
 </head>
-<body>
-
-    <!-- Navigation Header -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3 md:py-4">
-                
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel Volunteer</span></span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index.html" class="text-blue-600 font-semibold transition">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
-                    <a href="programs.html" class="text-gray-700 hover:text-blue-600 transition">Program</a>
-                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 transition">Donation</a>
-                    <a href="gallery.html" class="text-gray-700 hover:text-blue-600 transition">Galleries</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact Us</a>
-                </div>
-                
-                <!-- Donate Button + Mobile Menu -->
-                <div class="flex items-center space-x-3">
-                    <a href="donate.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
-                        Donate
-                    </a>
-                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
+<body class="tail-container bg-gray-50 text-gray-800">
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
+                <div>
+                    <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
             </div>
             
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="index.html" class="block text-blue-600 py-2 transition">Home</a>
-                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About Us</a>
-                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Program</a>
-                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donation</a>
-                <a href="gallery.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Galleries</a>
-                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact Us</a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="nav-link text-gray-700 font-semibold">Home</a>
+                <a href="about.html" class="nav-link text-gray-700">About Us</a>
+                <a href="programs.html" class="nav-link text-gray-700">Program</a>
+                <a href="donate.html" class="nav-link text-gray-700">Donation</a>
+                <a href="gallery.html" class="nav-link text-gray-700">Galleries</a>
+                <a href="contact.html" class="nav-link text-gray-700">Contact Us</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg min-h-[60vh] md:h-screen flex items-center text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">Travel with purpose, <br><span class="text-blue-300">Leave a positive Impact</span></h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Tanzania Travel Volunteer — Empowering communities through education, healthcare, and sustainable development.</p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-6 flex flex-col gap-4 text-lg">
+                <a href="index.html" class="font-medium">Home</a>
+                <a href="about.html" class="font-medium">About Us</a>
+                <a href="programs.html" class="font-medium">Program</a>
+                <a href="donate.html" class="font-medium">Donation</a>
+                <a href="gallery.html" class="font-medium">Galleries</a>
+                <a href="contact.html" class="font-medium">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Travel with purpose,<br>Leave a positive Impact
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+                Tanzania Travel Volunteer — Empowering communities through education, healthcare, and sustainable development.
+            </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="programs.html" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-semibold transition inline-flex items-center justify-center">
-                    <i class="fas fa-hands-helping mr-2"></i>Volunteer With Us
+                <a href="programs.html" class="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-handshake"></i> Volunteer With Us
                 </a>
-                <a href="donate.html" class="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-full font-semibold transition inline-flex items-center justify-center">
-                    <i class="fas fa-donate mr-2"></i>Support a Child
+                <a href="donate.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-[#16a34a] px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-heart"></i> Support a Child
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Who Are We Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <i class="fas fa-users text-4xl text-blue-600 mb-3"></i>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">WHO ARE WE</h2>
-            <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p class="text-gray-700 text-lg">Tanzania Travel Volunteer is an organization that focuses on providing volunteer opportunities in Tanzania. We are dedicated to fostering community development and sustainable change across Tanzania through education, healthcare, and environmental initiatives.</p>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section (10 Reasons) -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
+    <!-- WHO ARE WE -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <i class="fas fa-question-circle text-4xl text-blue-600 mb-3"></i>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">WHY CHOOSING TO VOLUNTEER WITH <br>TANZANIA TRAVEL VOLUNTEER?</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Choosing to volunteer with Tanzania Travel Volunteer can be a deeply rewarding and impactful experience for several reasons:</p>
+                <h2 class="text-4xl font-bold text-[#1e3a5f] mb-4">WHO ARE WE</h2>
+                <div class="w-24 h-1 bg-[#16a34a] mx-auto"></div>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-heart text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Meaningful Contribution</strong> - Empowering local communities through education, healthcare, and sustainable development projects.</span>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg leading-relaxed text-gray-600">
+                        Tanzania Travel Volunteer is a non-profit organization dedicated to fostering community development through education, healthcare, and environmental initiatives in Moshi, Kilimanjaro region. We connect passionate volunteers with meaningful projects that create lasting positive impact.
+                    </p>
+                    <div class="mt-8 grid grid-cols-2 gap-6">
+                        <div class="flex gap-4">
+                            <div class="text-4xl text-[#16a34a]"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <h4 class="font-semibold">300+</h4>
+                                <p class="text-sm text-gray-500">Volunteers Supported</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-4xl text-[#16a34a]"><i class="fa-solid fa-school"></i></div>
+                            <div>
+                                <h4 class="font-semibold">15+</h4>
+                                <p class="text-sm text-gray-500">Community Projects</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-globe text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Cultural Immersion</strong> - Gain firsthand experience of local traditions, languages, and daily life.</span>
+                <div class="bg-gray-100 p-8 rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800" alt="Kilimanjaro" class="rounded-2xl shadow-lg">
                 </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-chart-line text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Skill Development</strong> - Develop valuable skills in communication, leadership, and problem-solving.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-dollar-sign text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Affordable & Transparent</strong> - Program fees go directly to supporting communities, not administrative costs.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-tree text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Sustainable Development</strong> - Long-term, sustainable solutions to community challenges.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-smile text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Personal Fulfillment</strong> - Make a difference while gaining sense of purpose.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-mountain text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Explore Tanzania</strong> - Visit Kilimanjaro, Serengeti, and Zanzibar during free time.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-shield-alt text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Support from Staff</strong> - Guidance and support throughout your volunteer journey.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-users text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Networking</strong> - Meet like-minded individuals from around the world.</span>
-                </div>
-                <div class="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg">
-                    <i class="fas fa-hand-peace text-blue-600 mt-1 text-xl"></i>
-                    <span><strong>Ethical Volunteering</strong> - Community-driven projects where help is most needed.</span>
-                </div>
-            </div>
-            
-            <div class="text-center mt-10 p-6 bg-blue-50 rounded-xl max-w-3xl mx-auto">
-                <p class="text-gray-800 italic">"By choosing Tanzania Travel Volunteer, you're not just volunteering—you're becoming part of a movement to create positive, sustainable change while gaining unforgettable experiences and personal growth."</p>
             </div>
         </div>
     </section>
 
-    <!-- Learn More About Us -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <i class="fas fa-info-circle text-4xl text-blue-600 mb-3"></i>
-            <h2 class="text-3xl font-bold mb-6">Learn More About Tanzania Travel Volunteer</h2>
-            <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p class="text-gray-700 text-lg mb-6">Tanzania Travel Volunteering is a dedicated organization committed to fostering community development and sustainable change across Tanzania. Visitors seeking to learn more about the company will discover a passionate team focused on empowering local communities through education, healthcare, and environmental initiatives.</p>
-            <p class="text-gray-700 text-lg">With a transparent approach and a mission to create lasting positive change, Tanzania Travel Volunteer ensures every visitor leaves with a clear understanding of their goals, values, and the tangible impact they make.</p>
-            <a href="about.html" class="inline-block mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
-                Explore Our Programs <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Support Three Children Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
+    <!-- WHY CHOOSE US -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <i class="fas fa-child text-4xl text-blue-600 mb-3"></i>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Support the Education of Three Children</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">We are helping three wonderful children continue their education, but they need your support.</p>
+                <h2 class="text-4xl font-bold text-[#1e3a5f]">WHY CHOOSE TO VOLUNTEER WITH US</h2>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-2xl card-hover transition">
+                    <i class="fa-solid fa-hands-holding-circle text-4xl text-[#16a34a] mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Meaningful Contribution</h3>
+                    <p class="text-gray-600 text-sm">Empowering local communities with your skills and time.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl card-hover transition">
+                    <i class="fa-solid fa-globe text-4xl text-[#16a34a] mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Cultural Immersion</h3>
+                    <p class="text-gray-600 text-sm">Deep experience of authentic Tanzanian culture and Swahili language.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl card-hover transition">
+                    <i class="fa-solid fa-graduation-cap text-4xl text-[#16a34a] mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Skill Development</h3>
+                    <p class="text-gray-600 text-sm">Build leadership, teaching, and cross-cultural communication skills.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl card-hover transition">
+                    <i class="fa-solid fa-seedling text-4xl text-[#16a34a] mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Sustainable Impact</h3>
+                    <p class="text-gray-600 text-sm">Your fees directly support long-term community projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPORT CHILDREN -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#1e3a5f]">Support the Education of These Children</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Baron -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale text-center">
-                    <img src="https://images.unsplash.com/photo-1544717304-6fdb4e8c5f7a?w=600" alt="Baron" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-2xl font-bold text-gray-800">Baron</h3>
-                        <p class="text-blue-600 font-semibold">14 years</p>
-                        <p class="text-gray-700 mt-2">Dreams of becoming an <strong>Engineer</strong></p>
+                <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1544717304-6fdb4e8c5f7a?w=600" alt="Baron" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Baron, 14 years</h3>
+                        <p class="text-[#16a34a] text-sm">Dreams of becoming an Engineer</p>
+                        <button onclick="donateNow()" class="mt-6 w-full bg-[#16a34a] text-white py-3 rounded-2xl font-medium hover:bg-[#15803d]">Sponsor Baron</button>
                     </div>
                 </div>
-                
                 <!-- Brayden -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale text-center">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600" alt="Brayden" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-2xl font-bold text-gray-800">Brayden</h3>
-                        <p class="text-blue-600 font-semibold">12 years</p>
-                        <p class="text-gray-700 mt-2">Dreams of becoming an <strong>Apostle</strong></p>
+                <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600" alt="Brayden" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Brayden, 12 years</h3>
+                        <p class="text-[#16a34a] text-sm">Dreams of becoming an Apostle</p>
+                        <button onclick="donateNow()" class="mt-6 w-full bg-[#16a34a] text-white py-3 rounded-2xl font-medium hover:bg-[#15803d]">Sponsor Brayden</button>
                     </div>
                 </div>
-                
                 <!-- Blessing -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale text-center">
-                    <img src="https://images.unsplash.com/photo-1511123751419-02c2f1c8b8e6?w=600" alt="Blessing" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-2xl font-bold text-gray-800">Blessing</h3>
-                        <p class="text-blue-600 font-semibold">3 years</p>
-                        <p class="text-gray-700 mt-2">Dreams of becoming a <strong>Teacher</strong></p>
+                <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1511123751419-02c2f1c8b8e6?w=600" alt="Blessing" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Blessing, 3 years</h3>
+                        <p class="text-[#16a34a] text-sm">Dreams of becoming a Teacher</p>
+                        <button onclick="donateNow()" class="mt-6 w-full bg-[#16a34a] text-white py-3 rounded-2xl font-medium hover:bg-[#15803d]">Sponsor Blessing</button>
                     </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-10 max-w-2xl mx-auto">
-                <div class="bg-yellow-50 rounded-xl p-6 border border-yellow-200">
-                    <i class="fas fa-graduation-cap text-3xl text-yellow-600 mb-3"></i>
-                    <p class="text-gray-800 text-lg">Your donation can help provide <strong>school fees, school supplies, uniforms, and meals</strong> so they can grow, learn, and achieve their dreams.</p>
-                    <a href="donate.html" class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
-                        <i class="fas fa-hand-holding-heart mr-2"></i>Donate Now
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="bg-blue-700 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <i class="fas fa-envelope text-4xl mb-4"></i>
-            <h2 class="text-3xl font-bold mb-4">If you would like to help, please contact us today!</h2>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-                <a href="contact.html" class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center">
-                    <i class="fas fa-envelope mr-2"></i>Contact Us
+    <!-- BACK TO TOP / CTA -->
+    <div class="fixed bottom-8 right-8 bg-[#16a34a] text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl cursor-pointer hover:scale-110 transition md:hidden" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <i class="fa-solid fa-arrow-up text-2xl"></i>
+    </div>
+
+    <!-- FOOTER -->
+ <footer class="bg-[#1e3a5f] text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+
+        <!-- Logo Section -->
+        <div>
+            <div class="flex items-center gap-3 mb-6">
+                <img src="images/logo.jpeg" alt="Logo"
+                    class="w-12 h-12 object-contain rounded-full">
+
+                <div class="text-2xl font-bold">
+                    Tanzania Travel Volunteer
+                </div>
+            </div>
+
+            <p class="text-gray-300">
+                Travel with purpose. Leave a positive impact.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
+
+            <div class="flex flex-col gap-2 text-gray-300">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+
+                <a href="about.html" class="hover:text-white transition">
+                    About Us
                 </a>
-                <a href="https://wa.me/255622691910" target="_blank" class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-700 transition inline-flex items-center justify-center">
-                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+
+                <a href="programs.html" class="hover:text-white transition">
+                    Program
+                </a>
+
+                <a href="donate.html" class="hover:text-white transition">
+                    Donation
+                </a>
+
+                <a href="gallery.html" class="hover:text-white transition">
+                    Galleries
+                </a>
+
+                <a href="contact.html" class="hover:text-white transition">
+                    Contact Us
                 </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-3">
-                        <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                        <h3 class="text-xl font-bold text-white">Tanzania Travel Volunteer</h3>
-                    </div>
-                    <p>Travel with purpose, leave a positive impact.</p>
+        <!-- Contact Info -->
+        <div>
+            <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
+
+            <div class="space-y-4 text-gray-300">
+
+                <!-- Email -->
+                <a href="mailto:umojavolunteertanzania@gmail.com"
+                    class="flex items-center gap-3 hover:text-white transition">
+
+                    <i class="fa-solid fa-envelope text-[#16a34a]"></i>
+
+                    <span>
+                        umojavolunteertanzania@gmail.com
+                    </span>
+                </a>
+
+                <!-- Phone -->
+                <a href="https://wa.me/255622691910?text=Hello"
+                    class="flex items-center gap-3 hover:text-white transition">
+
+                    <i class="fa-solid fa-phone text-[#16a34a]"></i>
+
+                    <span>
+                        +255 622 691 910
+                    </span>
+                </a>
+
+                <!-- Address -->
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-location-dot text-[#16a34a] mt-1"></i>
+
+                    <span>
+                        Mbokomu KDC Moshi, Kilimanjaro, Tanzania
+                    </span>
                 </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
-                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
-                        <li><a href="programs.html" class="hover:text-blue-400 transition">Program</a></li>
-                        <li><a href="donate.html" class="hover:text-blue-400 transition">Donation</a></li>
-                        <li><a href="gallery.html" class="hover:text-blue-400 transition">Galleries</a></li>
-                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Contact Info</h4>
-                    <ul class="space-y-2">
-                        <li><i class="fas fa-envelope mr-2 text-blue-500"></i> umojavolunteertanzania@gmail.com</li>
-                        <li><i class="fas fa-phone mr-2 text-blue-500"></i> +255 622 691 910</li>
-                        <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> +255 622 691 910</li>
-                        <li><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Mbokomu KDC Moshi, Kilimanjaro, Tanzania</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/tanzaniaheartvolunteer" class="text-gray-400 hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
-                © 2026 Tanzania Travel Volunteer — Travel with purpose, leave a positive impact.
+
             </div>
         </div>
-    </footer>
 
-    <script src="js/main.js"></script>
+        <!-- Social Media -->
+        <div>
+            <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
+
+            <div class="flex items-center gap-4 text-2xl">
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/tanzaniaheartvolunteer"
+                    target="_blank"
+                    class="hover:text-[#16a34a] transition ml-6">
+
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/255622691910?text=Hello"
+                    target="_blank"
+                    class="hover:text-[#16a34a] transition">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div
+        class="text-center text-gray-400 text-sm mt-16 border-t border-gray-700 pt-8">
+
+        © 2026 Tanzania Travel Volunteer Organization. All Rights Reserved.
+    </div>
+</footer>
+
+    <script>
+        // Tailwind script already loaded
+        function donateNow() {
+            window.location.href = 'donate.html';
+        }
+
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

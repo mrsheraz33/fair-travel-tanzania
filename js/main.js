@@ -24,20 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Donation amount selection
-    const donationAmounts = document.querySelectorAll('.donation-amount');
-    const customAmount = document.getElementById('custom-amount');
-    
-    donationAmounts.forEach(btn => {
-        btn.addEventListener('click', function() {
-            donationAmounts.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
-            donationAmounts.forEach(b => b.classList.add('bg-gray-100', 'text-gray-800'));
-            this.classList.remove('bg-gray-100', 'text-gray-800');
-            this.classList.add('bg-blue-600', 'text-white');
-            if (customAmount) customAmount.value = '';
-        });
-    });
-    
     // Contact form
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -48,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Newsletter
+    // Newsletter subscription
     const subscribeBtn = document.getElementById('subscribe-btn');
     const subscribeEmail = document.getElementById('subscribe-email');
     

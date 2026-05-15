@@ -3,292 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleries | Tanzania Travel Volunteer</title>
+    <title>Gallery - Tanzania Travel Volunteer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        .tail-container { font-family: 'Poppins', sans-serif; }
+        
         .gallery-img {
-            transition: all 0.3s ease;
-            cursor: pointer;
+            transition: all 0.4s ease;
         }
         .gallery-img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            transform: scale(1.08);
+            filter: brightness(1.1);
         }
-        /* Lightbox style */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 1000;
-            cursor: pointer;
-            align-items: center;
-            justify-content: center;
+        
+        .filter-btn {
+            transition: all 0.3s ease;
         }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
+        .filter-btn.active {
+            background-color: #16a34a;
+            color: white;
+            border-color: #16a34a;
         }
-        .lightbox.active {
-            display: flex;
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #16a34a;
+            border-bottom: 2px solid #16a34a;
         }
     </style>
 </head>
-<body>
+<body class="tail-container bg-gray-50 text-gray-800">
 
-    <!-- Navigation Header -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3 md:py-4">
-                
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel Volunteer</span></span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
-                    <a href="programs.html" class="text-gray-700 hover:text-blue-600 transition">Program</a>
-                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 transition">Donation</a>
-                    <a href="gallery.html" class="text-blue-600 font-semibold transition">Galleries</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact Us</a>
-                </div>
-                
-                <!-- Donate Button + Mobile Menu -->
-                <div class="flex items-center space-x-3">
-                    <a href="donate.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
-                        Donate
-                    </a>
-                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
+                 <div>
+                    <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
             </div>
             
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Home</a>
-                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About Us</a>
-                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Program</a>
-                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donation</a>
-                <a href="gallery.html" class="block text-blue-600 py-2 transition">Galleries</a>
-                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Contact Us</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="nav-link text-gray-700">Home</a>
+                <a href="about.html" class="nav-link text-gray-700">About Us</a>
+                <a href="programs.html" class="nav-link text-gray-700">Program</a>
+                <a href="donate.html" class="nav-link text-gray-700">Donation</a>
+                <a href="gallery.html" class="nav-link text-gray-700 font-semibold">Galleries</a>
+                <a href="contact.html" class="nav-link text-gray-700">Contact Us</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
-    </nav>
 
-    <!-- Page Header -->
-    <section class="bg-blue-800 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
-            <i class="fas fa-images text-4xl mb-3"></i>
-            <h1 class="text-4xl md:text-5xl font-bold">GALLERIES</h1>
-            <p class="text-xl mt-2">Moments from our volunteer programs in Tanzania</p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-6 flex flex-col gap-4 text-lg">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="programs.html">Program</a>
+                <a href="donate.html">Donation</a>
+                <a href="gallery.html">Galleries</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-[#16a34a] to-[#1e3a5f] text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold">GALLERY</h1>
+            <p class="text-2xl mt-4">Moments of Impact & Adventure</p>
         </div>
     </section>
 
-    <!-- Gallery Categories -->
-    <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center gap-3 mb-10">
-                <button class="filter-btn active bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition" data-filter="all">All Photos</button>
-                <button class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full hover:bg-blue-600 hover:text-white transition" data-filter="volunteer">Volunteers</button>
-                <button class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full hover:bg-blue-600 hover:text-white transition" data-filter="children">Children</button>
-                <button class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full hover:bg-blue-600 hover:text-white transition" data-filter="safari">Safari & Nature</button>
-                <button class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full hover:bg-blue-600 hover:text-white transition" data-filter="community">Community</button>
-            </div>
+    <!-- FILTER BUTTONS -->
+    <div class="max-w-6xl mx-auto px-6 py-10">
+        <div class="flex flex-wrap gap-3 justify-center" id="filter-buttons">
+            <button onclick="filterGallery('all')" class="filter-btn active px-6 py-3 border border-gray-300 rounded-full font-medium">All Photos</button>
+            <button onclick="filterGallery('volunteer')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Volunteers</button>
+            <button onclick="filterGallery('children')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Children</button>
+            <button onclick="filterGallery('safari')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Safari & Nature</button>
+            <button onclick="filterGallery('community')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Community Work</button>
         </div>
-    </section>
-
-    <!-- Gallery Grid -->
-    <section class="py-10 pb-20">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="gallery-grid">
-                
-                <!-- VOLUNTEER CATEGORY IMAGES -->
-                <div class="gallery-item volunteer">
-                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=500" alt="Volunteers teaching" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item volunteer">
-                    <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=500" alt="Volunteer with children" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item volunteer">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500" alt="Group of volunteers" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item volunteer">
-                    <img src="https://images.unsplash.com/photo-1559027616-2e6f98e5a5c3?w=500" alt="Volunteer teaching" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-
-                <!-- CHILDREN CATEGORY IMAGES -->
-                <div class="gallery-item children">
-                    <img src="https://images.unsplash.com/photo-1503455637927-7300951f3954?w=500" alt="Happy child" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item children">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=500" alt="Smiling child" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item children">
-                    <img src="https://images.unsplash.com/photo-1511123751419-02c2f1c8b8e6?w=500" alt="Young child" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item children">
-                    <img src="https://images.unsplash.com/photo-1544717304-6fdb4e8c5f7a?w=500" alt="African child" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item children">
-                    <img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=500" alt="School children" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-
-                <!-- SAFARI & NATURE CATEGORY IMAGES -->
-                <div class="gallery-item safari">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500" alt="Lion safari" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item safari">
-                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01e33?w=500" alt="Elephant" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item safari">
-                    <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?w=500" alt="Giraffe" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item safari">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500" alt="Mount Kilimanjaro" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item safari">
-                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500" alt="Zanzibar beach" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item safari">
-                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=500" alt="Zebra" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-
-                <!-- COMMUNITY CATEGORY IMAGES -->
-                <div class="gallery-item community">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500" alt="Community work" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item community">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500" alt="Building school" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item community">
-                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=500" alt="Women empowerment" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item community">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500" alt="Healthcare volunteer" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-                <div class="gallery-item community">
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500" alt="Community meeting" class="gallery-img w-full h-64 object-cover rounded-xl shadow-md">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <img id="lightbox-img" src="" alt="">
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-3">
-                        <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                        <h3 class="text-xl font-bold text-white">Tanzania Travel Volunteer</h3>
-                    </div>
-                    <p>Travel with purpose, leave a positive impact.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
-                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
-                        <li><a href="programs.html" class="hover:text-blue-400 transition">Program</a></li>
-                        <li><a href="donate.html" class="hover:text-blue-400 transition">Donation</a></li>
-                        <li><a href="gallery.html" class="hover:text-blue-400 transition">Galleries</a></li>
-                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Contact Info</h4>
-                    <ul class="space-y-2">
-                        <li><i class="fas fa-envelope mr-2 text-blue-500"></i> umojavolunteertanzania@gmail.com</li>
-                        <li><i class="fas fa-phone mr-2 text-blue-500"></i> +255 622 691 910</li>
-                        <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> +255 622 691 910</li>
-                        <li><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Mbokomu KDC Moshi, Kilimanjaro, Tanzania</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Follow Us</h4>
-                    <div class="flex space-x-4">
-        
-                       <a href="https://www.facebook.com/tanzaniaheartvolunteer" class="text-gray-400 hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a  href="https://wa.me/255622691910?text=Hello" target="_blank"  class="text-gray-400 hover:text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+    <!-- GALLERY GRID -->
+    <section class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid">
+            
+            <!-- Volunteers -->
+            <div class="gallery-item" data-category="volunteer">
+                <img src="https://images.unsplash.com/photo-1529156069898-8f9f2e0d1f4a?w=800" alt="Teaching" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="volunteer">
+                <img src="https://images.unsplash.com/photo-1573164574472-797cdf4a583c?w=800" alt="Volunteers with kids" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+
+            <!-- Children -->
+            <div class="gallery-item" data-category="children">
+                <img src="https://images.unsplash.com/photo-1544717304-6fdb4e8c5f7a?w=800" alt="Baron" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="children">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800" alt="Brayden" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="children">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800" alt="Smiling child" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+
+            <!-- Safari & Nature -->
+            <div class="gallery-item" data-category="safari">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800" alt="Kilimanjaro" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="https://images.unsplash.com/photo-1516426122078-4d2d6c8e2e2e?w=800" alt="Safari" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="https://images.unsplash.com/photo-1549365710-2d1c4f6b0e6c?w=800" alt="Zanzibar" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+
+            <!-- Community -->
+            <div class="gallery-item" data-category="community">
+                <img src="https://images.unsplash.com/photo-1582213782179-9d2c8f2f8e2e?w=800" alt="Community work" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="https://images.unsplash.com/photo-1559028013-7a9d7d8c3b8c?w=800" alt="School building" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
+        <div class="max-w-4xl w-full px-4">
+            <img id="lightbox-image" src="" class="w-full rounded-3xl" alt="">
+            <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-4xl hover:text-gray-300">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1e3a5f] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
+                    <div class="text-2xl font-bold">Tanzania Travel Volunteer</div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
-                © 2026 Tanzania Travel Volunteer — Travel with purpose, leave a positive impact.
+            <div>
+                <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
+                <div class="flex flex-col gap-2 text-gray-300">
+                    <a href="index.html" class="hover:text-white">Home</a>
+                    <a href="about.html" class="hover:text-white">About Us</a>
+                    <a href="programs.html" class="hover:text-white">Program</a>
+                    <a href="donate.html" class="hover:text-white">Donation</a>
+                    <a href="gallery.html" class="hover:text-white">Galleries</a>
+                    <a href="contact.html" class="hover:text-white">Contact Us</a>
+                </div>
             </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-lg">Contact</h4>
+                <div class="space-y-3 text-gray-300">
+                    <a href="mailto:umojavolunteertanzania@gmail.com" class="flex items-center gap-3 hover:text-white">
+                        <i class="fa-solid fa-envelope"></i> umojavolunteertanzania@gmail.com
+                    </a>
+                    <a href="https://wa.me/255622691910?text=Hello" class="flex items-center gap-3 hover:text-white">
+                        <i class="fa-solid fa-phone"></i> +255 622 691 910
+                    </a>
+                </div>
+            </div>
+           <div>
+            <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
+
+            <div class="flex items-center gap-4 text-2xl">
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/tanzaniaheartvolunteer"
+                    target="_blank"
+                    class="hover:text-[#16a34a] transition ml-6">
+
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/255622691910?text=Hello"
+                    target="_blank"
+                    class="hover:text-[#16a34a] transition">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+        </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-16 border-t border-gray-700 pt-8">
+            © 2026 Tanzania Travel Volunteer Organization. All Rights Reserved.
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script>
-        // Gallery Filter Functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-blue-600', 'text-white');
-                    b.classList.add('bg-gray-200', 'text-gray-700');
-                });
-                // Add active class to clicked button
-                btn.classList.add('bg-blue-600', 'text-white');
-                btn.classList.remove('bg-gray-200', 'text-gray-700');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                galleryItems.forEach(item => {
-                    if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-        
-        // Lightbox Functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const allImages = document.querySelectorAll('.gallery-img');
-        
-        allImages.forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.classList.add('active');
-                lightboxImg.src = img.src;
-            });
-        });
-        
-        lightbox.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-        });
-        
-        // Back button
-        const backBtn = document.getElementById('back-btn');
-        if (backBtn) {
-            backBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.history.back();
+
+        // Gallery Filter
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('#filter-buttons button');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = item.getAttribute('data-category') === category ? 'block' : 'none';
+                }
             });
         }
+
+        // Lightbox
+        function showLightbox(img) {
+            document.getElementById('lightbox-image').src = img.src;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        // Close lightbox with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeLightbox();
+        });
     </script>
 </body>
 </html>

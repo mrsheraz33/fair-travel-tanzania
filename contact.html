@@ -3,283 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Tanzania Travel Volunteer</title>
+    <title>Contact Us - Tanzania Travel Volunteer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        .tail-container { font-family: 'Poppins', sans-serif; }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #16a34a;
+            border-bottom: 2px solid #16a34a;
+        }
+    </style>
 </head>
-<body>
+<body class="tail-container bg-gray-50 text-gray-800">
 
-    <!-- Navigation Header -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3 md:py-4">
-                
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                    <span class="text-sm md:text-xl font-bold text-gray-800">Tanzania <span class="text-blue-600">Travel Volunteer</span></span>
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
+               <div>
+                    <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
-                    <a href="programs.html" class="text-gray-700 hover:text-blue-600 transition">Program</a>
-                    <a href="donate.html" class="text-gray-700 hover:text-blue-600 transition">Donation</a>
-                    <a href="gallery.html" class="text-gray-700 hover:text-blue-600 transition">Galleries</a>
-                    <a href="contact.html" class="text-blue-600 font-semibold transition">Contact Us</a>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="nav-link text-gray-700">Home</a>
+                <a href="about.html" class="nav-link text-gray-700">About Us</a>
+                <a href="programs.html" class="nav-link text-gray-700">Program</a>
+                <a href="donate.html" class="nav-link text-gray-700">Donation</a>
+                <a href="gallery.html" class="nav-link text-gray-700">Galleries</a>
+                <a href="contact.html" class="nav-link text-gray-700 font-semibold">Contact Us</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-6 flex flex-col gap-4 text-lg">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="programs.html">Program</a>
+                <a href="donate.html">Donation</a>
+                <a href="gallery.html">Galleries</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-[#16a34a] to-[#1e3a5f] text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold">CONTACT US</h1>
+            <p class="text-2xl mt-4">We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16">
+        
+        <!-- Contact Form -->
+        <div>
+            <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">Send us a Message</h2>
+            <form id="contactForm" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="name" required
+                           class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-[#16a34a]">
                 </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email Address <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" required
+                           class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-[#16a34a]">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Message <span class="text-red-500">*</span></label>
+                    <textarea id="message" rows="6" required
+                              class="w-full px-5 py-4 border border-gray-300 rounded-3xl focus:outline-none focus:border-[#16a34a]"></textarea>
+                </div>
+                <button type="submit"
+                        class="w-full bg-[#16a34a] hover:bg-[#15803d] text-white py-5 rounded-2xl font-semibold text-lg transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-10">
+            <div>
+                <h3 class="text-2xl font-bold text-[#1e3a5f] mb-6">Get in Touch</h3>
                 
-                <!-- Donate Button + Mobile Menu -->
-                <div class="flex items-center space-x-3">
-                    <a href="donate.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
-                        Donate
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-envelope text-2xl text-[#16a34a] mt-1"></i>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <a href="mailto:umojavolunteertanzania@gmail.com" class="text-gray-600 hover:text-[#16a34a]">
+                                umojavolunteertanzania@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-phone text-2xl text-[#16a34a] mt-1"></i>
+                        <div>
+                            <p class="font-medium">Phone / WhatsApp</p>
+                            <a href="https://wa.me/255622691910?text=Hello" class="text-gray-600 hover:text-[#16a34a]">
+                                +255 622 691 910
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-location-dot text-2xl text-[#16a34a] mt-1"></i>
+                        <div>
+                            <p class="font-medium">Address</p>
+                            <p class="text-gray-600">Mbokomu KDC Moshi,<br>Kilimanjaro, Tanzania</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Hours -->
+            <div class="bg-white p-8 rounded-3xl border border-gray-100">
+                <h4 class="font-semibold text-lg mb-4">Office Hours</h4>
+                <p class="text-gray-600">Monday to Saturday: 8:00 AM - 6:00 PM (EAT)</p>
+                <p class="text-sm text-gray-500 mt-4">We reply within 24 hours</p>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                <div class="flex gap-6 text-4xl">
+                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank" class="hover:text-[#16a34a]">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
-                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank" class="hover:text-[#16a34a]">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1e3a5f] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
+                    <div class="text-2xl font-bold">Tanzania Travel Volunteer</div>
+                </div>
+                <p class="text-gray-300">Travel with purpose. Leave a positive impact.</p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
+                <div class="flex flex-col gap-2 text-gray-300">
+                    <a href="index.html" class="hover:text-white">Home</a>
+                    <a href="about.html" class="hover:text-white">About Us</a>
+                    <a href="programs.html" class="hover:text-white">Program</a>
+                    <a href="donate.html" class="hover:text-white">Donation</a>
+                    <a href="gallery.html" class="hover:text-white">Galleries</a>
+                    <a href="contact.html" class="hover:text-white">Contact Us</a>
                 </div>
             </div>
             
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Home</a>
-                <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">About Us</a>
-                <a href="programs.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Program</a>
-                <a href="donate.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Donation</a>
-                <a href="gallery.html" class="block text-gray-700 hover:text-blue-600 py-2 transition">Galleries</a>
-                <a href="contact.html" class="block text-blue-600 py-2 transition">Contact Us</a>
+            <div>
+                <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
+                <div class="space-y-3 text-gray-300">
+                    <a href="mailto:umojavolunteertanzania@gmail.com" class="hover:text-white">umojavolunteertanzania@gmail.com</a>
+                    <a href="https://wa.me/255622691910?text=Hello" class="hover:text-white">+255 622 691 910</a>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="bg-blue-800 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <a href="javascript:void(0);" id="back-btn" class="back-btn text-white mb-4 inline-block"><i class="fas fa-arrow-left"></i> Back</a>
-            <i class="fas fa-envelope text-4xl mb-3"></i>
-            <h1 class="text-4xl md:text-5xl font-bold">CONTACT US</h1>
-            <p class="text-xl mt-2">We'd love to hear from you!</p>
-        </div>
-    </section>
-
-    <!-- Main Contact Content -->
-    <section class="py-16">
-        <div class="container mx-auto px-4 max-w-6xl">
             
-            <!-- Intro Text -->
-            <div class="text-center mb-12">
-                <p class="text-gray-700 text-lg">Whether you have a question, comment, or just want to say hello, we're here to listen. Fill out the form below or use one of the other contact methods listed on this page.</p>
-            </div>
-
-            <!-- Contact Grid -->
-            <div class="grid md:grid-cols-2 gap-10 mb-12">
-                
-                <!-- Contact Form -->
-                <div class="bg-white shadow-xl rounded-xl p-8 border">
-                    <h2 class="text-2xl font-bold mb-6 flex items-center">
-                        <i class="fas fa-paper-plane text-blue-600 mr-3"></i> Send a Message
-                    </h2>
-                    <form id="contact-form">
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-semibold mb-2">Your Name <span class="text-red-500">*</span></label>
-                            <input type="text" required class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-semibold mb-2">Email Address <span class="text-red-500">*</span></label>
-                            <input type="email" required class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                            <input type="tel" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-semibold mb-2">Subject <span class="text-red-500">*</span></label>
-                            <select required class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
-                                <option value="">Select a subject</option>
-                                <option>Volunteer Inquiry</option>
-                                <option>Donation Question</option>
-                                <option>Partnership Opportunity</option>
-                                <option>General Inquiry</option>
-                                <option>Feedback</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Message <span class="text-red-500">*</span></label>
-                            <textarea rows="5" required class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition">
-                            <i class="fas fa-paper-plane mr-2"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Contact Information -->
-                <div>
-                    <!-- Alternative Contact Methods -->
-                    <div class="bg-gray-50 rounded-xl p-6 mb-6">
-                        <h2 class="text-2xl font-bold mb-5 flex items-center">
-                            <i class="fas fa-address-book text-blue-600 mr-3"></i> Alternative Contact Methods
-                        </h2>
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-envelope text-blue-600 text-xl mt-1"></i>
-                                <div>
-                                    <p class="font-semibold">Email</p>
-                                    <a href="mailto:umojavolunteertanzania@gmail.com" class="text-blue-600 hover:underline">umojavolunteertanzania@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-phone text-blue-600 text-xl mt-1"></i>
-                                <div>
-                                    <p class="font-semibold">Phone</p>
-                                    <p>+255 767 691 910</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1"></i>
-                                <div>
-                                    <p class="font-semibold">Address</p>
-                                    <p>Boma Road, Moshi, Kilimanjaro, Tanzania</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="bg-gray-50 rounded-xl p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-4 flex items-center">
-                            <i class="fab fa-instagram text-pink-500 mr-3"></i> Social Media
-                        </h2>
-                        <div class="space-y-3">
-                            <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-pink-500 transition">
-                                <i class="fab fa-instagram text-2xl"></i>
-                                <span>@tanzaniaheartvolunteer</span>
-                            </a>
-                            <a href="https://www.facebook.com/tanzaniaheartvolunteer" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition">
-                                <i class="fab fa-facebook text-2xl"></i>
-                                <span>@tanzaniaheartvolunteer</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Office Hours -->
-                    <div class="bg-gray-50 rounded-xl p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-4 flex items-center">
-                            <i class="fas fa-clock text-blue-600 mr-3"></i> Office Hours
-                        </h2>
-                        <p>Our office hours are <strong>Monday to Saturday from 08:00 AM to 06:00 PM</strong>.</p>
-                        <p class="mt-2 text-green-600">✓ We respond to all inquiries within 24 hours.</p>
-                    </div>
-
-                    <!-- Why Get in Touch -->
-                    <div class="bg-blue-50 rounded-xl p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-3 flex items-center">
-                            <i class="fas fa-question-circle text-blue-600 mr-3"></i> Why Get in Touch?
-                        </h2>
-                        <p>We value your feedback and would love to hear from you if you have any questions or concerns about our organization. Whether you're interested in <strong>volunteering, donating, or just learning more</strong> about what we do, we're here to help.</p>
-                    </div>
-
-                    <!-- What to Expect -->
-                    <div class="bg-green-50 rounded-xl p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-3 flex items-center">
-                            <i class="fas fa-hand-peace text-green-600 mr-3"></i> What to Expect
-                        </h2>
-                        <p>When you get in touch with us, you can expect a <strong>prompt response</strong> from one of our team members. We'll do our best to answer your questions and provide you with the information you need.</p>
-                    </div>
-
-                    <!-- Join Our Community -->
-                    <div class="bg-purple-50 rounded-xl p-6">
-                        <h2 class="text-xl font-bold mb-3 flex items-center">
-                            <i class="fas fa-users text-purple-600 mr-3"></i> Join Our Community
-                        </h2>
-                        <p>Stay up-to-date with the latest news and updates from our organization by joining our community. Follow us on social media or sign up for our newsletter to stay informed.</p>
-                        <div class="flex space-x-4 mt-4">
-                            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">Newsletter</a>
-                            <a href="#" class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition text-sm"><i class="fab fa-instagram mr-1"></i> Follow</a>
-                        </div>
-                    </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
+                <div class="flex gap-6 text-3xl">
+                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank" class="hover:text-[#16a34a]"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank" class="hover:text-[#16a34a]"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="pb-16">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="bg-white shadow-xl rounded-xl overflow-hidden">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1016593.6237124264!2d36.2633!3d-3.3667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1831111c7c9c2c1b%3A0x8c8c8c8c8c8c8c8c!2sMoshi%2C%20Tanzania!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s" 
-                    width="100%" 
-                    height="350" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-3">
-                        <img src="images/logo.jpeg" alt="Logo" class="h-10 w-auto object-contain">
-                        <h3 class="text-xl font-bold text-white">Tanzania Travel Volunteer</h3>
-                    </div>
-                    <p>Travel with purpose, leave a positive impact.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
-                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
-                        <li><a href="programs.html" class="hover:text-blue-400 transition">Program</a></li>
-                        <li><a href="donate.html" class="hover:text-blue-400 transition">Donation</a></li>
-                        <li><a href="gallery.html" class="hover:text-blue-400 transition">Galleries</a></li>
-                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Contact Info</h4>
-                    <ul class="space-y-2">
-                        <li><i class="fas fa-envelope mr-2 text-blue-500"></i> umojavolunteertanzania@gmail.com</li>
-                        <li><i class="fas fa-phone mr-2 text-blue-500"></i> +255 767 691 910</li>
-                        <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> +255 767 691 910</li>
-                        <li><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Boma Road, Moshi, Kilimanjaro, Tanzania</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-3">Follow Us</h4>
-                    <div class="flex space-x-4">
-                   <a href="https://www.facebook.com/tanzaniaheartvolunteer" class="text-gray-400 hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a  href="https://wa.me/255622691910?text=Hello" target="_blank"  class="text-gray-400 hover:text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                    <div class="mt-3">
-                        <p class="text-sm text-gray-500">@tanzaniaheartvolunteer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
-                © 2026 Tanzania Travel Volunteer — Travel with purpose, leave a positive impact.
-            </div>
+        <div class="text-center text-gray-400 text-sm mt-16 border-t border-gray-700 pt-8">
+            © 2026 Tanzania Travel Volunteer Organization. All Rights Reserved.
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script>
-        // Contact form submission
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! We will get back to you within 24 hours.');
-                this.reset();
-            });
-        }
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been received. We'll reply within 24 hours.");
+            this.reset();
+        });
     </script>
 </body>
 </html>
