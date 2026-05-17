@@ -13,10 +13,11 @@
         
         .gallery-img {
             transition: all 0.4s ease;
+            cursor: pointer;
         }
         .gallery-img:hover {
-            transform: scale(1.08);
-            filter: brightness(1.1);
+            transform: scale(1.05);
+            filter: brightness(1.05);
         }
         
         .filter-btn {
@@ -102,42 +103,66 @@
     <section class="max-w-7xl mx-auto px-6 pb-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid">
             
-            <!-- Volunteers -->
+            <!-- Volunteers (Teaching, helping, group photos) -->
             <div class="gallery-item" data-category="volunteer">
-                <img src="https://images.unsplash.com/photo-1529156069898-8f9f2e0d1f4a?w=800" alt="Teaching" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?w=600" alt="Volunteer teaching" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="volunteer">
-                <img src="https://images.unsplash.com/photo-1573164574472-797cdf4a583c?w=800" alt="Volunteers with kids" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/6646955/pexels-photo-6646955.jpeg?w=600" alt="Volunteers with children" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="volunteer">
+                <img src="https://images.pexels.com/photos/6646897/pexels-photo-6646897.jpeg?w=600" alt="Helping community" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="volunteer">
+                <img src="https://images.pexels.com/photos/6646900/pexels-photo-6646900.jpeg?w=600" alt="Group of volunteers" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
 
-            <!-- Children -->
+            <!-- Children (Happy children, education) -->
             <div class="gallery-item" data-category="children">
-                <img src="https://images.unsplash.com/photo-1544717304-6fdb4e8c5f7a?w=800" alt="Baron" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/4672097/pexels-photo-4672097.jpeg?w=600" alt="African child smiling" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="children">
-                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800" alt="Brayden" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/4672108/pexels-photo-4672108.jpeg?w=600" alt="Children studying" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="children">
-                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800" alt="Smiling child" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/4391417/pexels-photo-4391417.jpeg?w=600" alt="Child with book" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="children">
+                <img src="https://images.pexels.com/photos/4672100/pexels-photo-4672100.jpeg?w=600" alt="Children at school" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
 
-            <!-- Safari & Nature -->
+            <!-- Safari & Nature (Kilimanjaro, wildlife, Zanzibar) -->
             <div class="gallery-item" data-category="safari">
-                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800" alt="Kilimanjaro" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/396876/pexels-photo-396876.jpeg?w=600" alt="Mount Kilimanjaro" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="https://images.unsplash.com/photo-1516426122078-4d2d6c8e2e2e?w=800" alt="Safari" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?w=600" alt="Elephant safari" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="https://images.unsplash.com/photo-1549365710-2d1c4f6b0e6c?w=800" alt="Zanzibar" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/1818877/pexels-photo-1818877.jpeg?w=600" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="https://images.pexels.com/photos/1350712/pexels-photo-1350712.jpeg?w=600" alt="Zanzibar beach" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="https://images.pexels.com/photos/397426/pexels-photo-397426.jpeg?w=600" alt="Lion" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="https://images.pexels.com/photos/132608/pexels-photo-132608.jpeg?w=600" alt="Zebra" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
 
-            <!-- Community -->
+            <!-- Community Work (Building, healthcare, women empowerment) -->
             <div class="gallery-item" data-category="community">
-                <img src="https://images.unsplash.com/photo-1582213782179-9d2c8f2f8e2e?w=800" alt="Community work" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/6647010/pexels-photo-6647010.jpeg?w=600" alt="Building school" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="community">
-                <img src="https://images.unsplash.com/photo-1559028013-7a9d7d8c3b8c?w=800" alt="School building" class="gallery-img w-full h-72 object-cover rounded-3xl shadow-md cursor-pointer" onclick="showLightbox(this)">
+                <img src="https://images.pexels.com/photos/6646937/pexels-photo-6646937.jpeg?w=600" alt="Healthcare volunteer" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="https://images.pexels.com/photos/6646953/pexels-photo-6646953.jpeg?w=600" alt="Women empowerment" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="https://images.pexels.com/photos/6646895/pexels-photo-6646895.jpeg?w=600" alt="Community meeting" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
         </div>
     </section>
@@ -160,30 +185,31 @@
                     <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
                     <div class="text-2xl font-bold">Tanzania Travel Volunteer</div>
                 </div>
+                <p class="text-gray-300">Travel with purpose. Leave a positive impact.</p>
             </div>
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
                 <div class="flex flex-col gap-2 text-gray-300">
-                    <a href="index.html" class="hover:text-white">Home</a>
-                    <a href="about.html" class="hover:text-white">About Us</a>
-                    <a href="programs.html" class="hover:text-white">Program</a>
-                    <a href="donate.html" class="hover:text-white">Donation</a>
-                    <a href="gallery.html" class="hover:text-white">Galleries</a>
-                    <a href="contact.html" class="hover:text-white">Contact Us</a>
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="about.html" class="hover:text-white transition">About Us</a>
+                    <a href="programs.html" class="hover:text-white transition">Program</a>
+                    <a href="donate.html" class="hover:text-white transition">Donation</a>
+                    <a href="gallery.html" class="hover:text-white transition">Galleries</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact Us</a>
                 </div>
             </div>
             <div>
-                <h4 class="font-semibold mb-4 text-lg">Contact</h4>
+                <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
                 <div class="space-y-3 text-gray-300">
-                    <a href="mailto:umojavolunteertanzania@gmail.com" class="flex items-center gap-3 hover:text-white">
+                    <a href="mailto:umojavolunteertanzania@gmail.com" class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-envelope"></i> umojavolunteertanzania@gmail.com
                     </a>
-                    <a href="https://wa.me/255622691910?text=Hello" class="flex items-center gap-3 hover:text-white">
+                    <a href="https://wa.me/255622691910?text=Hello" class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-phone"></i> +255 622 691 910
                     </a>
                 </div>
             </div>
-           <div>
+          <div>
             <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
 
             <div class="flex items-center gap-4 text-2xl">
