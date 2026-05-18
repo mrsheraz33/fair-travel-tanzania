@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        .tail-container { font-family: 'Poppins', sans-serif; }
+
+        .tail-container {
+            font-family: 'Poppins', sans-serif;
+        }
+
         .nav-link {
             transition: all 0.3s ease;
         }
+
         .nav-link:hover {
             color: #16a34a;
             border-bottom: 2px solid #16a34a;
         }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+         .float-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #16a34a;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 999;
+        transition: all 0.3s;
+    }
+    .float-btn:hover {
+        transform: scale(1.1);
+        background: #15803d;
+    }
+    .popup-box {
+        position: fixed;
+        bottom: 110px;
+        right: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        padding: 15px 20px;
+        display: none;
+        z-index: 1000;
+        animation: fadeIn 0.3s ease;
+    }
+    .popup-box.show {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .popup-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup-icons a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    .popup-icons a:hover {
+        transform: translateY(-5px);
+    }
+    .close-popup {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        cursor: pointer;
+        color: #999;
+        font-size: 18px;
+    }
+    .close-popup:hover {
+        color: #333;
+    }
     </style>
 </head>
+
 <body class="tail-container bg-gray-50 text-gray-800">
 
     <!-- HEADER -->
@@ -26,22 +114,24 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
-               <div>
+                <div>
                     <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
             </div>
-            
+
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="index.html" class="nav-link text-gray-700">Home</a>
                 <a href="about.html" class="nav-link text-gray-700">About Us</a>
                 <a href="programs.html" class="nav-link text-gray-700">Program</a>
                 <a href="donate.html" class="nav-link text-gray-700">Donation</a>
                 <a href="gallery.html" class="nav-link text-gray-700">Galleries</a>
+                <a href="info-faq.html" class="nav-link text-gray-700">Info & FAQ</a>
                 <a href="contact.html" class="nav-link text-gray-700 font-semibold">Contact Us</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <a href="donate.html"
+                    class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
                 <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -56,6 +146,7 @@
                 <a href="programs.html">Program</a>
                 <a href="donate.html">Donation</a>
                 <a href="gallery.html">Galleries</a>
+                <a href="info-faq.html">Info & FAQ</a>
                 <a href="contact.html">Contact Us</a>
             </div>
         </div>
@@ -69,93 +160,119 @@
         </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16">
-        
-        <!-- Contact Form -->
-        <div>
-            <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">Send us a Message</h2>
-            <form id="contactForm" class="space-y-6">
-                <div>
-                    <label class="block text-sm font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
-                    <input type="text" id="name" required
-                           class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-[#16a34a]">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2">Email Address <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" required
-                           class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-[#16a34a]">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2">Message <span class="text-red-500">*</span></label>
-                    <textarea id="message" rows="6" required
-                              class="w-full px-5 py-4 border border-gray-300 rounded-3xl focus:outline-none focus:border-[#16a34a]"></textarea>
-                </div>
-                <button type="submit"
-                        class="w-full bg-[#16a34a] hover:bg-[#15803d] text-white py-5 rounded-2xl font-semibold text-lg transition">
-                    Send Message
-                </button>
-            </form>
-        </div>
+    <!-- Contact Section - Form Removed, Pop-up Buttons Added (Same Design) -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
 
-        <!-- Contact Information -->
-        <div class="space-y-10">
+        <!-- Two Column Layout (Same as before) -->
+        <div class="grid md:grid-cols-2 gap-16">
+
+            <!-- LEFT SIDE: Pop-up Contact Buttons (Modern Style) -->
             <div>
-                <h3 class="text-2xl font-bold text-[#1e3a5f] mb-6">Get in Touch</h3>
-                
+                <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">Get in Touch</h2>
+                <p class="text-gray-600 mb-8">Choose your preferred way to reach us. Click the button below and we'll
+                    get back to you quickly!</p>
+
                 <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-envelope text-2xl text-[#16a34a] mt-1"></i>
-                        <div>
-                            <p class="font-medium">Email</p>
-                            <a href="mailto:umojavolunteertanzania@gmail.com" class="text-gray-600 hover:text-[#16a34a]">
-                                umojavolunteertanzania@gmail.com
-                            </a>
+                    <!-- WhatsApp Button - Pop-up -->
+                    <a href="https://wa.me/255622691910?text=Hello%20I%20want%20to%20know%20more%20about%20Tanzania%20Travel%20Volunteer"
+                        target="_blank"
+                        class="contact-card flex items-center gap-5 p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition group">
+                        <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp text-3xl text-green-600"></i>
                         </div>
-                    </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">WhatsApp Us</h3>
+                            <p class="text-gray-500 text-sm">Click to chat with us directly</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-green-600 transition"></i>
+                    </a>
 
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-phone text-2xl text-[#16a34a] mt-1"></i>
-                        <div>
-                            <p class="font-medium">Phone / WhatsApp</p>
-                            <a href="https://wa.me/255622691910?text=Hello" class="text-gray-600 hover:text-[#16a34a]">
-                                +255 622 691 910
-                            </a>
+                    <!-- Email Button - Pop-up -->
+                    <a href="mailto:umojavolunteertanzania@gmail.com?subject=Inquiry%20about%20Tanzania%20Travel%20Volunteer&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20Tanzania%20Travel%20Volunteer.%20Please%20send%20me%20more%20information."
+                        class="contact-card flex items-center gap-5 p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition group">
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-3xl text-blue-600"></i>
                         </div>
-                    </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Email Us</h3>
+                            <p class="text-gray-500 text-sm">Click to send us an email</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-blue-600 transition"></i>
+                    </a>
+                </div>
 
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-location-dot text-2xl text-[#16a34a] mt-1"></i>
-                        <div>
-                            <p class="font-medium">Address</p>
-                            <p class="text-gray-600">Mbokomu KDC Moshi,<br>Kilimanjaro, Tanzania</p>
-                        </div>
-                    </div>
+                <!-- Phone Number Display -->
+                <div class="mt-8 p-5 bg-gray-50 rounded-2xl text-center">
+                    <p class="text-gray-500 text-sm">Or call us directly</p>
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                        class="text-[#16a34a] font-semibold text-lg">+255 622 691 910</a>
                 </div>
             </div>
 
-            <!-- Office Hours -->
-            <div class="bg-white p-8 rounded-3xl border border-gray-100">
-                <h4 class="font-semibold text-lg mb-4">Office Hours</h4>
-                <p class="text-gray-600">Monday to Saturday: 8:00 AM - 6:00 PM (EAT)</p>
-                <p class="text-sm text-gray-500 mt-4">We reply within 24 hours</p>
-            </div>
+            <!-- RIGHT SIDE: Contact Information (Same as before) -->
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-2xl font-bold text-[#1e3a5f] mb-6">Alternative Contact Methods</h3>
 
-            <!-- Social Media -->
-            <div>
-                <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
-                <div class="flex gap-6 text-4xl">
-                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank" class="hover:text-[#16a34a]">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://wa.me/255622691910?text=Hello" target="_blank" class="hover:text-[#16a34a]">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-envelope text-2xl text-[#16a34a] mt-1"></i>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:umojavolunteertanzania@gmail.com"
+                                    class="text-gray-600 hover:text-[#16a34a]">
+                                    umojavolunteertanzania@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-phone text-2xl text-[#16a34a] mt-1"></i>
+                            <div>
+                                <p class="font-medium">Phone / WhatsApp</p>
+                                <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                                    class="text-gray-600 hover:text-[#16a34a]">
+                                    +255 622 691 910
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-location-dot text-2xl text-[#16a34a] mt-1"></i>
+                            <div>
+                                <p class="font-medium">Address</p>
+                                <p class="text-gray-600">Mbokomu KDC Moshi,<br>Kilimanjaro, Tanzania</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                    <h4 class="font-semibold text-lg mb-4">Office Hours</h4>
+                    <p class="text-gray-600">Monday to Saturday: 8:00 AM - 6:00 PM (EAT)</p>
+                    <p class="text-sm text-gray-500 mt-4">We reply within 24 hours</p>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex gap-6 text-4xl">
+                        <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank"
+                            class="hover:text-[#16a34a] transition">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                            class="hover:text-[#16a34a] transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (Same) -->
     <footer class="bg-[#1e3a5f] text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
             <div>
@@ -165,32 +282,57 @@
                 </div>
                 <p class="text-gray-300">Travel with purpose. Leave a positive impact.</p>
             </div>
-            
+
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
                 <div class="flex flex-col gap-2 text-gray-300">
-                    <a href="index.html" class="hover:text-white">Home</a>
-                    <a href="about.html" class="hover:text-white">About Us</a>
-                    <a href="programs.html" class="hover:text-white">Program</a>
-                    <a href="donate.html" class="hover:text-white">Donation</a>
-                    <a href="gallery.html" class="hover:text-white">Galleries</a>
-                    <a href="contact.html" class="hover:text-white">Contact Us</a>
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="about.html" class="hover:text-white transition">About Us</a>
+                    <a href="programs.html" class="hover:text-white transition">Program</a>
+                    <a href="donate.html" class="hover:text-white transition">Donation</a>
+                    <a href="gallery.html" class="hover:text-white transition">Galleries</a>
+                    <a href="info-faq.html" class="hover:text-white transition">Info & FAQ</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact Us</a>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
                 <div class="space-y-3 text-gray-300">
-                    <a href="mailto:umojavolunteertanzania@gmail.com" class="hover:text-white">umojavolunteertanzania@gmail.com</a>
-                    <a href="https://wa.me/255622691910?text=Hello" class="hover:text-white">+255 622 691 910</a>
+                    <a href="mailto:umojavolunteertanzania@gmail.com"
+                        class="hover:text-white transition flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> umojavolunteertanzania@gmail.com
+                    </a>
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                        class="hover:text-white transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> +255 622 691 910
+                    </a>
+                    <div class="flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <span>Mbokomu KDC Moshi,<br>Kilimanjaro, Tanzania</span>
+                    </div>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
-                <div class="flex gap-6 text-3xl">
-                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank" class="hover:text-[#16a34a]"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://wa.me/255622691910?text=Hello" target="_blank" class="hover:text-[#16a34a]"><i class="fa-brands fa-whatsapp"></i></a>
+
+                <div class="flex items-center gap-4 text-2xl">
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank"
+                        class="hover:text-[#16a34a] transition ml-6">
+
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                        class="hover:text-[#16a34a] transition">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -199,18 +341,47 @@
         </div>
     </footer>
 
+ <!-- Floating Button -->
+<div class="float-btn" onclick="togglePopup()">
+    <i class="fa-regular fa-message text-white text-2xl"></i>
+</div>
+
+<!-- Popup Box -->
+<div id="contactPopup" class="popup-box">
+    <span class="close-popup" onclick="togglePopup()"></span>
+    <div class="popup-icons">
+        <a href="mailto:umojavolunteertanzania@gmail.com" target="_blank" style="background: #ea4335; color: white;">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/255622691910?text=Hello%20I%20want%20to%20know%20more" target="_blank" style="background: #25D366; color: white;">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+255622691910" style="background: #3b82f6; color: white;">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+</div>
+
     <script>
         // Mobile Menu
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("Thank you! Your message has been received. We'll reply within 24 hours.");
-            this.reset();
-        });
+         function togglePopup() {
+        const popup = document.getElementById('contactPopup');
+        popup.classList.toggle('show');
+    }
+    
+    // Click outside to close
+    document.addEventListener('click', function(event) {
+        const popup = document.getElementById('contactPopup');
+        const floatBtn = document.querySelector('.float-btn');
+        if (!popup.contains(event.target) && !floatBtn.contains(event.target) && popup.classList.contains('show')) {
+            popup.classList.remove('show');
+        }
+    });
     </script>
 </body>
+
 </html>
