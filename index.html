@@ -1,107 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Volunteer in Tanzania – Travel with Purpose, Leave a Positive Impact | Tanzania Travel Volunteer</title>
+    <title>Tanzania Travel Volunteer | Volunteer Programs, Cultural Exchange & Adventure Travel</title>
+    <meta name="description" content="Join Tanzania Travel Volunteer for affordable and meaningful volunteer opportunities.
+         Experience local culture, support communities, and explore Tanzania's wildlife, mountains, 
+         and beautiful landscapes.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
         :root {
             --primary: #16a34a;
         }
-        .tail-container { font-family: 'Poppins', sans-serif; }
+
+        .tail-container {
+            font-family: 'Poppins', sans-serif;
+        }
+
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
             background-size: cover;
             background-position: center;
         }
+
         .card-hover:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+
         .nav-link {
             transition: all 0.3s ease;
         }
+
         .nav-link:hover {
             color: #16a34a;
             border-bottom: 2px solid #16a34a;
         }
-       .float-btn {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: #16a34a;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        z-index: 999;
-        transition: all 0.3s;
-    }
-    .float-btn:hover {
-        transform: scale(1.1);
-        background: #15803d;
-    }
-    .popup-box {
-        position: fixed;
-        bottom: 110px;
-        right: 30px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        padding: 15px 20px;
-        display: none;
-        z-index: 1000;
-        animation: fadeIn 0.3s ease;
-    }
-    .popup-box.show {
-        display: block;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .popup-icons {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-    .popup-icons a {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        transition: all 0.3s;
-        text-decoration: none;
-    }
-    .popup-icons a:hover {
-        transform: translateY(-5px);
-    }
-    .close-popup {
-        position: absolute;
-        top: 8px;
-        right: 12px;
-        cursor: pointer;
-        color: #999;
-        font-size: 18px;
-    }
-    .close-popup:hover {
-        color: #333;
-    }
+
+        .float-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #16a34a;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+            background: #15803d;
+        }
+
+        .popup-box {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 15px 20px;
+            display: none;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .popup-icons a:hover {
+            transform: translateY(-5px);
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            cursor: pointer;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .close-popup:hover {
+            color: #333;
+        }
     </style>
 </head>
+
 <body class="tail-container bg-gray-50 text-gray-800">
     <!-- HEADER -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -112,7 +142,7 @@
                     <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
             </div>
-            
+
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="index.html" class="nav-link text-gray-700 font-semibold">Home</a>
@@ -125,7 +155,8 @@
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <a href="donate.html"
+                    class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
                 <!-- Mobile Hamburger -->
                 <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
                     <i class="fa-solid fa-bars"></i>
@@ -150,16 +181,19 @@
     <section class="hero-bg h-screen flex items-center text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                Travel with purpose,<br>Leave a positive Impact
+                Travel with Purpose.<br>Volunteer with Impact.<br>Experience Tanzania.
             </h1>
             <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
-                Tanzania Travel Volunteer — Empowering communities through education, healthcare, and sustainable development.
+                Tanzania Travel Volunteer — Empowering communities through education, healthcare, and sustainable
+                development.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="programs.html" class="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition">
+                <a href="programs.html"
+                    class="bg-white text-[#16a34a] hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition">
                     <i class="fa-solid fa-handshake"></i> Volunteer With Us
                 </a>
-                <a href="donate.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-[#16a34a] px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition">
+                <a href="donate.html"
+                    class="bg-transparent border-2 border-white hover:bg-white hover:text-[#16a34a] px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition">
                     <i class="fa-solid fa-heart"></i> Support a Child
                 </a>
             </div>
@@ -175,7 +209,9 @@
             </div>
             <div class="max-w-4xl mx-auto">
                 <p class="text-lg leading-relaxed text-gray-600 text-center">
-                    Tanzania Travel Volunteer is an organization that focuses on providing volunteer opportunities in Tanzania. We are dedicated to fostering community development and sustainable change across Tanzania through education, healthcare, and environmental initiatives.
+                    Tanzania Travel Volunteer is an organization that focuses on providing volunteer opportunities in
+                    Tanzania. We are dedicated to fostering community development and sustainable change across Tanzania
+                    through education, healthcare, and environmental initiatives.
                 </p>
             </div>
         </div>
@@ -185,23 +221,80 @@
     <section class="py-20 bg-gray-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#1e3a5f]">WHY CHOOSING TO VOLUNTEER WITH TANZANIA TRAVEL VOLUNTEER?</h2>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Choosing to volunteer with Tanzania Travel Volunteer can be a deeply rewarding and impactful experience for several reasons:</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1e3a5f]">WHY CHOOSING TO VOLUNTEER WITH TANZANIA TRAVEL
+                    VOLUNTEER?</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Choosing to volunteer with Tanzania Travel Volunteer can
+                    be a deeply rewarding and impactful experience for several reasons:</p>
             </div>
             <div class="space-y-4 max-w-4xl mx-auto">
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-heart text-[#16a34a] mt-1"></i><p><strong>1: Meaningful Contribution to Local Communities</strong> - Tanzania focuses on empowering local communities through education, healthcare, and sustainable development projects. By volunteering, you can directly contribute to improving the lives of individuals and families in Tanzania.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-globe text-[#16a34a] mt-1"></i><p><strong>2. Cultural Immersion</strong> - Volunteering with Tanzania Travel Volunteer provides an opportunity to immerse yourself in Tanzanian culture. You'll gain firsthand experience of local traditions, languages, and daily life, fostering cross-cultural understanding and personal growth.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-chart-line text-[#16a34a] mt-1"></i><p><strong>3. Skill Development</strong> - Whether you're teaching, working on community projects, or assisting in healthcare, you'll develop valuable skills such as communication, leadership, and problem-solving. These experiences can enhance your resume and broaden your professional horizons.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-dollar-sign text-[#16a34a] mt-1"></i><p><strong>4. Affordable and Transparent Programs</strong> - Tanzania Travel Volunteer is known for its affordable and transparent program fees, ensuring that your contributions go directly toward supporting the community rather than administrative costs.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-tree text-[#16a34a] mt-1"></i><p><strong>5. Support for Sustainable Development</strong> - Tanzania Travel Volunteer emphasizes long-term, sustainable solutions to community challenges. By participating, you'll be part of efforts that create lasting positive change rather than short-term fixes.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-smile text-[#16a34a] mt-1"></i><p><strong>6. Personal Fulfillment</strong> - Volunteering is a chance to make a difference in the world while gaining a sense of purpose and fulfillment. The relationships you build and the impact you create can be life-changing.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-mountain text-[#16a34a] mt-1"></i><p><strong>7. Explore Tanzania's Natural Beauty</strong> - Tanzania is home to stunning landscapes, including Mount Kilimanjaro, Serengeti National Park, and Zanzibar's beaches. Volunteering with Tanzania Travel Volunteer allows you to explore these natural wonders during your free time.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-shield-alt text-[#16a34a] mt-1"></i><p><strong>8. Support from Experienced Staff</strong> - Tanzania Travel Volunteer provides guidance and support throughout your volunteer journey, ensuring you feel safe, prepared, and equipped to make a meaningful impact.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-users text-[#16a34a] mt-1"></i><p><strong>9. Networking and Lifelong Connections</strong> - You'll meet like-minded individuals from around the world, creating opportunities for networking and building lifelong friendships.</p></div>
-                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i class="fa-solid fa-hand-peace text-[#16a34a] mt-1"></i><p><strong>10. Aligning with Ethical Volunteering Practices</strong> - Tanzania Travel Volunteer prioritizes ethical volunteering, ensuring that projects are community-driven and that volunteers are placed where they are most needed.</p></div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-heart text-[#16a34a] mt-1"></i>
+                    <p><strong>1: Meaningful Contribution to Local Communities</strong> - Tanzania focuses on empowering
+                        local communities through education, healthcare, and sustainable development projects. By
+                        volunteering, you can directly contribute to improving the lives of individuals and families in
+                        Tanzania.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-globe text-[#16a34a] mt-1"></i>
+                    <p><strong>2. Cultural Immersion</strong> - Volunteering with Tanzania Travel Volunteer provides an
+                        opportunity to immerse yourself in Tanzanian culture. You'll gain firsthand experience of local
+                        traditions, languages, and daily life, fostering cross-cultural understanding and personal
+                        growth.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-chart-line text-[#16a34a] mt-1"></i>
+                    <p><strong>3. Skill Development</strong> - Whether you're teaching, working on community projects,
+                        or assisting in healthcare, you'll develop valuable skills such as communication, leadership,
+                        and problem-solving. These experiences can enhance your resume and broaden your professional
+                        horizons.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-dollar-sign text-[#16a34a] mt-1"></i>
+                    <p><strong>4. Affordable and Transparent Programs</strong> - Tanzania Travel Volunteer is known for
+                        its affordable and transparent program fees, ensuring that your contributions go directly toward
+                        supporting the community rather than administrative costs.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-tree text-[#16a34a] mt-1"></i>
+                    <p><strong>5. Support for Sustainable Development</strong> - Tanzania Travel Volunteer emphasizes
+                        long-term, sustainable solutions to community challenges. By participating, you'll be part of
+                        efforts that create lasting positive change rather than short-term fixes.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-smile text-[#16a34a] mt-1"></i>
+                    <p><strong>6. Personal Fulfillment</strong> - Volunteering is a chance to make a difference in the
+                        world while gaining a sense of purpose and fulfillment. The relationships you build and the
+                        impact you create can be life-changing.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-mountain text-[#16a34a] mt-1"></i>
+                    <p><strong>7. Explore Tanzania's Natural Beauty</strong> - Tanzania is home to stunning landscapes,
+                        including Mount Kilimanjaro, Serengeti National Park, and Zanzibar's beaches. Volunteering with
+                        Tanzania Travel Volunteer allows you to explore these natural wonders during your free time.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-shield-alt text-[#16a34a] mt-1"></i>
+                    <p><strong>8. Support from Experienced Staff</strong> - Tanzania Travel Volunteer provides guidance
+                        and support throughout your volunteer journey, ensuring you feel safe, prepared, and equipped to
+                        make a meaningful impact.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-users text-[#16a34a] mt-1"></i>
+                    <p><strong>9. Networking and Lifelong Connections</strong> - You'll meet like-minded individuals
+                        from around the world, creating opportunities for networking and building lifelong friendships.
+                    </p>
+                </div>
+                <div class="flex items-start gap-3 bg-white p-4 rounded-xl"><i
+                        class="fa-solid fa-hand-peace text-[#16a34a] mt-1"></i>
+                    <p><strong>10. Aligning with Ethical Volunteering Practices</strong> - Tanzania Travel Volunteer
+                        prioritizes ethical volunteering, ensuring that projects are community-driven and that
+                        volunteers are placed where they are most needed.</p>
+                </div>
             </div>
             <div class="mt-8 p-6 bg-green-50 rounded-xl max-w-3xl mx-auto">
-                <p class="text-gray-800">"By choosing Tanzania Travel Volunteer, you're not just volunteering—you're becoming part of a movement to create positive, sustainable change while gaining unforgettable experiences and personal growth."</p>
+                <p class="text-gray-800">"By choosing Tanzania Travel Volunteer, you're not just volunteering—you're
+                    becoming part of a movement to create positive, sustainable change while gaining unforgettable
+                    experiences and personal growth."</p>
             </div>
         </div>
     </section>
@@ -209,12 +302,22 @@
     <!-- Learn More About Tanzania Travel Volunteer -->
     <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">Learn More About Tanzania Travel Volunteer</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">Learn More About Tanzania Travel Volunteer
+            </h2>
             <div class="w-24 h-1 bg-[#16a34a] mx-auto mb-8"></div>
             <p class="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
-                Tanzania Travel Volunteering is a dedicated organization committed to fostering community development and sustainable change across Tanzania. Visitors seeking to learn more about the company will discover a passionate team focused on empowering local communities through education, healthcare, and environmental initiatives. Tanzania Travel Volunteer offers impactful volunteer programs that allow participants to contribute meaningfully while gaining a deeper understanding of Tanzanian culture and challenges. With a transparent approach and a mission to create lasting positive change, Tanzania Travel Volunteer Tanzania ensures every visitor leaves with a clear understanding of their goals, values, and the tangible impact they make. Explore their programs and see how you can be part of a transformative journey.
+                Tanzania Travel Volunteering is a dedicated organization committed to fostering community development
+                and sustainable change across Tanzania. Visitors seeking to learn more about the company will discover a
+                passionate team focused on empowering local communities through education, healthcare, and environmental
+                initiatives. Tanzania Travel Volunteer offers impactful volunteer programs that allow participants to
+                contribute meaningfully while gaining a deeper understanding of Tanzanian culture and challenges. With a
+                transparent approach and a mission to create lasting positive change, Tanzania Travel Volunteer Tanzania
+                ensures every visitor leaves with a clear understanding of their goals, values, and the tangible impact
+                they make. Explore their programs and see how you can be part of a transformative journey.
             </p>
-            <a href="programs.html" class="inline-block mt-8 bg-[#16a34a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#15803d] transition">Explore Our Programs <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            <a href="programs.html"
+                class="inline-block mt-8 bg-[#16a34a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#15803d] transition">Explore
+                Our Programs <i class="fa-solid fa-arrow-right ml-2"></i></a>
         </div>
     </section>
 
@@ -227,18 +330,23 @@
             </div>
             <div class="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-lg text-center">
                 <!-- PICTURE ADDED HERE (as client requested) -->
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800" 
-                     alt="Children Education" 
-                     class="w-full h-64 object-cover rounded-2xl mb-6">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800" alt="Children Education"
+                    class="w-full h-64 object-cover rounded-2xl mb-6">
                 <i class="fa-solid fa-graduation-cap text-5xl text-[#16a34a] mb-4"></i>
                 <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                    Millions of children are growing up in difficult circumstances, yet they still carry big dreams for their future. Your support can help give vulnerable children access to education, school supplies, safe learning environments, and the opportunity to build a better life.
+                    Millions of children are growing up in difficult circumstances, yet they still carry big dreams for
+                    their future. Your support can help give vulnerable children access to education, school supplies,
+                    safe learning environments, and the opportunity to build a better life.
                 </p>
                 <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                    By donating, you are helping children from disadvantaged communities stay in school, gain knowledge, and create hope for a brighter tomorrow. Every contribution — big or small — can make a lasting difference in a child's life.
+                    By donating, you are helping children from disadvantaged communities stay in school, gain knowledge,
+                    and create hope for a brighter tomorrow. Every contribution — big or small — can make a lasting
+                    difference in a child's life.
                 </p>
-                <p class="text-gray-800 font-semibold text-xl mb-6">Together, we can empower the next generation through education.</p>
-                <a href="donate.html" class="inline-block bg-[#16a34a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#15803d] transition">
+                <p class="text-gray-800 font-semibold text-xl mb-6">Together, we can empower the next generation through
+                    education.</p>
+                <a href="donate.html"
+                    class="inline-block bg-[#16a34a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#15803d] transition">
                     <i class="fa-solid fa-hand-holding-heart mr-2"></i>Donate Now
                 </a>
             </div>
@@ -251,10 +359,12 @@
             <i class="fa-solid fa-envelope text-4xl mb-4"></i>
             <h2 class="text-3xl font-bold mb-4">If you would like to help, please contact us today!</h2>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-                <a href="contact.html" class="bg-white text-[#16a34a] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2">
+                <a href="contact.html"
+                    class="bg-white text-[#16a34a] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2">
                     <i class="fa-solid fa-envelope"></i> Contact Us
                 </a>
-                <a href="https://wa.me/255622691910?text=Hello" target="_blank" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#16a34a] transition inline-flex items-center justify-center gap-2">
+                <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                    class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#16a34a] transition inline-flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
@@ -279,18 +389,20 @@
                     <a href="programs.html" class="hover:text-white transition">Program</a>
                     <a href="donate.html" class="hover:text-white transition">Donation</a>
                     <a href="gallery.html" class="hover:text-white transition">Galleries</a>
-                     <a href="info-faq.html" class="hover:text-white transition">Info & FAQ</a>
+                    <a href="info-faq.html" class="hover:text-white transition">Info & FAQ</a>
                     <a href="contact.html" class="hover:text-white transition">Contact Us</a>
                 </div>
             </div>
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
                 <div class="space-y-4 text-gray-300">
-                    <a href="mailto:umojavolunteertanzania@gmail.com" class="flex items-center gap-3 hover:text-white transition">
+                    <a href="mailto:umojavolunteertanzania@gmail.com"
+                        class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-envelope text-[#16a34a]"></i>
                         <span>tanzaniatravelvolunteer@gmail.com</span>
                     </a>
-                    <a href="https://wa.me/255622691910?text=Hello" class="flex items-center gap-3 hover:text-white transition">
+                    <a href="https://wa.me/255622691910?text=Hello"
+                        class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-phone text-[#16a34a]"></i>
                         <span>+255 622 691 910</span>
                     </a>
@@ -300,44 +412,41 @@
                     </div>
                 </div>
             </div>
-           <div>
-            <h4 class="font-semibold mb-4 text-lg ml-8">Follow Us</h4>
+            <div>
+                <h4 class="font-semibold mb-4 text-lg ml-8">Follow Us</h4>
 
-            <div class="flex items-center gap-4 text-2xl">
+                <div class="flex items-center gap-4 text-2xl">
 
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/tanzaniaheartvolunteer"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition ml-6">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank"
+                        class="hover:text-[#16a34a] transition ml-6">
 
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-                <!-- WhatsApp -->
-                <a href="https://wa.me/255622691910?text=Hello"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                        class="hover:text-[#16a34a] transition">
 
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
 
-                 <!-- WhatsApp -->
-                <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition">
-                   <i class="fa-brands fa-instagram"></i>
-                </a>
+                    <!-- WhatsApp -->
+                    <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
+                        class="hover:text-[#16a34a] transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
+                </div>
             </div>
-        </div>
         </div>
         <div class="text-center text-gray-400 text-sm mt-16 border-t border-gray-700 pt-8">
             © 2026 Tanzania Travel Volunteer Organization. All Rights Reserved.
         </div>
     </footer>
-  <!-- Popup Box -->
-     <div class="float-btn" onclick="togglePopup()">
-    <i class="fa-regular fa-message text-white text-2xl"></i>
+    <!-- Popup Box -->
+    <div class="float-btn" onclick="togglePopup()">
+        <i class="fa-regular fa-message text-white text-2xl"></i>
     </div>
     <div id="contactPopup" class="popup-box">
         <span class="close-popup" onclick="togglePopup()"></span>
@@ -353,10 +462,10 @@
             <a href="tel:+255622691910" style="background: #3b82f6; color: white;">
                 <i class="fa-solid fa-phone"></i>
             </a>
-             <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
-            style="background: #e4405f; color: white;">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+            <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
+                style="background: #e4405f; color: white;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
     </div>
 
@@ -381,19 +490,20 @@
             });
         });
 
-            function togglePopup() {
-        const popup = document.getElementById('contactPopup');
-        popup.classList.toggle('show');
-    }
-    
-    // Click outside to close
-    document.addEventListener('click', function(event) {
-        const popup = document.getElementById('contactPopup');
-        const floatBtn = document.querySelector('.float-btn');
-        if (!popup.contains(event.target) && !floatBtn.contains(event.target) && popup.classList.contains('show')) {
-            popup.classList.remove('show');
+        function togglePopup() {
+            const popup = document.getElementById('contactPopup');
+            popup.classList.toggle('show');
         }
-    });
+
+        // Click outside to close
+        document.addEventListener('click', function (event) {
+            const popup = document.getElementById('contactPopup');
+            const floatBtn = document.querySelector('.float-btn');
+            if (!popup.contains(event.target) && !floatBtn.contains(event.target) && popup.classList.contains('show')) {
+                popup.classList.remove('show');
+            }
+        });
     </script>
 </body>
+
 </html>

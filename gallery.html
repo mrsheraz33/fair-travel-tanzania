@@ -1,115 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Volunteer in Tanzania – Travel with Purpose, Leave a Positive Impact | Tanzania Travel Volunteer</title>
+    <title>Tanzania Travel Volunteer | Volunteer Programs, Cultural Exchange & Adventure Travel</title>
+    <meta name="description" content="Join Tanzania Travel Volunteer for affordable and meaningful volunteer opportunities.
+         Experience local culture, support communities, and explore Tanzania's wildlife, mountains, 
+         and beautiful landscapes.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        .tail-container { font-family: 'Poppins', sans-serif; }
-        
+
+        .tail-container {
+            font-family: 'Poppins', sans-serif;
+        }
+
         .gallery-img {
             transition: all 0.4s ease;
             cursor: pointer;
         }
+
         .gallery-img:hover {
             transform: scale(1.05);
             filter: brightness(1.05);
         }
-        
+
         .filter-btn {
             transition: all 0.3s ease;
         }
+
         .filter-btn.active {
             background-color: #16a34a;
             color: white;
             border-color: #16a34a;
         }
-        
+
         .nav-link {
             transition: all 0.3s ease;
         }
+
         .nav-link:hover {
             color: #16a34a;
             border-bottom: 2px solid #16a34a;
         }
 
-       .float-btn {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: #16a34a;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        z-index: 999;
-        transition: all 0.3s;
-    }
-    .float-btn:hover {
-        transform: scale(1.1);
-        background: #15803d;
-    }
-    .popup-box {
-        position: fixed;
-        bottom: 110px;
-        right: 30px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        padding: 15px 20px;
-        display: none;
-        z-index: 1000;
-        animation: fadeIn 0.3s ease;
-    }
-    .popup-box.show {
-        display: block;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .popup-icons {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-    .popup-icons a {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        transition: all 0.3s;
-        text-decoration: none;
-    }
-    .popup-icons a:hover {
-        transform: translateY(-5px);
-    }
-    .close-popup {
-        position: absolute;
-        top: 8px;
-        right: 12px;
-        cursor: pointer;
-        color: #999;
-        font-size: 18px;
-    }
-    .close-popup:hover {
-        color: #333;
-    }
+        .float-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #16a34a;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+            background: #15803d;
+        }
+
+        .popup-box {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 15px 20px;
+            display: none;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .popup-icons a:hover {
+            transform: translateY(-5px);
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            cursor: pointer;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .close-popup:hover {
+            color: #333;
+        }
     </style>
 </head>
+
 <body class="tail-container bg-gray-50 text-gray-800">
 
     <!-- HEADER -->
@@ -117,23 +144,24 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="images/logo.jpeg" alt="Logo" class="w-12 h-12 object-contain rounded-full">
-                 <div>
+                <div>
                     <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
             </div>
-            
+
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="index.html" class="nav-link text-gray-700">Home</a>
                 <a href="about.html" class="nav-link text-gray-700">About Us</a>
                 <a href="programs.html" class="nav-link text-gray-700">Program</a>
                 <a href="donate.html" class="nav-link text-gray-700">Donation</a>
                 <a href="gallery.html" class="nav-link text-gray-700 font-semibold">Galleries</a>
-                 <a href="info-faq.html" class="nav-link text-gray-700">Info & FAQ</a>
+                <a href="info-faq.html" class="nav-link text-gray-700">Info & FAQ</a>
                 <a href="contact.html" class="nav-link text-gray-700">Contact Us</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <a href="donate.html"
+                    class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
                 <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -165,118 +193,154 @@
     <!-- FILTER BUTTONS -->
     <div class="max-w-6xl mx-auto px-6 py-10">
         <div class="flex flex-wrap gap-3 justify-center" id="filter-buttons">
-            <button onclick="filterGallery('all')" class="filter-btn active px-6 py-3 border border-gray-300 rounded-full font-medium">All Photos</button>
-            <button onclick="filterGallery('volunteer')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Volunteers</button>
-            <button onclick="filterGallery('children')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Children</button>
-            <button onclick="filterGallery('safari')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Safari & Nature</button>
-            <button onclick="filterGallery('community')" class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Community Work</button>
+            <button onclick="filterGallery('all')"
+                class="filter-btn active px-6 py-3 border border-gray-300 rounded-full font-medium">All Photos</button>
+            <button onclick="filterGallery('volunteer')"
+                class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Volunteers</button>
+            <button onclick="filterGallery('children')"
+                class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Children</button>
+            <button onclick="filterGallery('safari')"
+                class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Safari & Nature</button>
+            <button onclick="filterGallery('community')"
+                class="filter-btn px-6 py-3 border border-gray-300 rounded-full font-medium">Community Work</button>
         </div>
     </div>
 
     <!-- GALLERY GRID -->
     <section class="max-w-7xl mx-auto px-6 pb-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid">
-            
+
             <!-- Volunteers (Teaching, helping, group photos) -->
             <div class="gallery-item" data-category="volunteer">
-                <img src="./images/10.jpeg" alt="Volunteer teaching" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/10.jpeg" alt="Volunteer teaching"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="volunteer">
-                <img src="./images/8.jpeg" alt="Volunteers with children" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/8.jpeg" alt="Volunteers with children"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="volunteer">
-                <img src="./images/1.jpg" alt="Helping community" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/1.jpg" alt="Helping community"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="volunteer">
-                <img src="./images/13.jpeg" alt="Group of volunteers" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/13.jpeg" alt="Group of volunteers"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
 
             <!-- Children (Happy children, education) -->
             <div class="gallery-item" data-category="children">
-                <img src="./images/2.jpeg" alt="African child smiling" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/2.jpeg" alt="African child smiling"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="children">
-                <img src="./images/3.jpeg" alt="Children studying" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/3.jpeg" alt="Children studying"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="children">
-                <img src="./images/15.jpeg" alt="Child with book" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/15.jpeg" alt="Child with book"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="children">
-                <img src="./images/19.jpeg" alt="Children at school" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/19.jpeg" alt="Children at school"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="children">
-                <img src="./images/4.jpeg" alt="Children at school" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/4.jpeg" alt="Children at school"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
-             <div class="gallery-item" data-category="children">
-                <img src="./images/5.jpeg" alt="Children at school" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            <div class="gallery-item" data-category="children">
+                <img src="./images/5.jpeg" alt="Children at school"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
 
             <!-- Safari & Nature (Kilimanjaro, wildlife, Zanzibar) -->
             <div class="gallery-item" data-category="safari">
-                <img src="./images/32.jpeg" alt="Mount Kilimanjaro" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/32.jpeg" alt="Mount Kilimanjaro"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/33.jpeg" alt="Elephant safari" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/33.jpeg" alt="Elephant safari"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/22.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/22.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/16.jpeg" alt="Zanzibar beach" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/16.jpeg" alt="Zanzibar beach"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/23.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/23.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/24.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/24.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/25.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/25.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/26.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
-            </div>
-             <div class="gallery-item" data-category="safari">
-                <img src="./images/27.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
-            </div>
-             <div class="gallery-item" data-category="safari">
-                <img src="./images/28.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
-            </div>
-             <div class="gallery-item" data-category="safari">
-                <img src="./images/29.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
-            </div>
-             <div class="gallery-item" data-category="safari">
-                <img src="./images/30.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/26.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="safari">
-                <img src="./images/31.jpeg" alt="Giraffe" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/27.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="./images/28.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="./images/29.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="./images/30.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            </div>
+            <div class="gallery-item" data-category="safari">
+                <img src="./images/31.jpeg" alt="Giraffe"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
 
-        
+
             <!-- Community Work (Building, healthcare, women empowerment) -->
             <div class="gallery-item" data-category="community">
-                <img src="./images/14.jpeg" alt="Building school" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/14.jpeg" alt="Building school"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="community">
-                <img src="./images/21.jpeg" alt="Healthcare volunteer" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/21.jpeg" alt="Healthcare volunteer"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="community">
-                <img src="./images/11.jpeg" alt="Women empowerment" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/11.jpeg" alt="Women empowerment"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="community">
-                <img src="./images/12.jpeg" alt="Community meeting" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/12.jpeg" alt="Community meeting"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
             <div class="gallery-item" data-category="community">
-                <img src="./images/9.jpeg" alt="Community meeting" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+                <img src="./images/9.jpeg" alt="Community meeting"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
-               <div class="gallery-item" data-category="community">
-                <img src="./images/17.jpeg" alt="Community meeting" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            <div class="gallery-item" data-category="community">
+                <img src="./images/17.jpeg" alt="Community meeting"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
-                <div class="gallery-item" data-category="community">
-                <img src="./images/18.jpeg" alt="Community meeting" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            <div class="gallery-item" data-category="community">
+                <img src="./images/18.jpeg" alt="Community meeting"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
-                <div class="gallery-item" data-category="community">
-                <img src="./images/20.jpeg" alt="Community meeting" class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
+            <div class="gallery-item" data-category="community">
+                <img src="./images/20.jpeg" alt="Community meeting"
+                    class="gallery-img w-full h-72 object-cover rounded-2xl shadow-md" onclick="showLightbox(this)">
             </div>
         </div>
     </section>
@@ -315,53 +379,52 @@
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
                 <div class="space-y-3 text-gray-300">
-                    <a href="mailto:umojavolunteertanzania@gmail.com" class="flex items-center gap-3 hover:text-white transition">
+                    <a href="mailto:umojavolunteertanzania@gmail.com"
+                        class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-envelope"></i> tanzaniatravelvolunteer@gmail.com
                     </a>
-                    <a href="https://wa.me/255622691910?text=Hello" class="flex items-center gap-3 hover:text-white transition">
+                    <a href="https://wa.me/255622691910?text=Hello"
+                        class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-phone"></i> +255 622 691 910
                     </a>
                 </div>
             </div>
-          <div>
-            <h4 class="font-semibold mb-4 text-lg ml-8">Follow Us</h4>
+            <div>
+                <h4 class="font-semibold mb-4 text-lg ml-8">Follow Us</h4>
 
-            <div class="flex items-center gap-4 text-2xl">
+                <div class="flex items-center gap-4 text-2xl">
 
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/tanzaniaheartvolunteer"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition ml-6">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank"
+                        class="hover:text-[#16a34a] transition ml-6">
 
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-                <!-- WhatsApp -->
-                <a href="https://wa.me/255622691910?text=Hello"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                        class="hover:text-[#16a34a] transition">
 
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
 
-                 <!-- WhatsApp -->
-                <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition">
-                   <i class="fa-brands fa-instagram"></i>
-                </a>
+                    <!-- WhatsApp -->
+                    <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
+                        class="hover:text-[#16a34a] transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
+                </div>
             </div>
-        </div>
         </div>
         <div class="text-center text-gray-400 text-sm mt-16 border-t border-gray-700 pt-8">
             © 2026 Tanzania Travel Volunteer Organization. All Rights Reserved.
         </div>
     </footer>
 
-  <!-- Popup Box -->
-     <div class="float-btn" onclick="togglePopup()">
-    <i class="fa-regular fa-message text-white text-2xl"></i>
+    <!-- Popup Box -->
+    <div class="float-btn" onclick="togglePopup()">
+        <i class="fa-regular fa-message text-white text-2xl"></i>
     </div>
     <div id="contactPopup" class="popup-box">
         <span class="close-popup" onclick="togglePopup()"></span>
@@ -377,10 +440,10 @@
             <a href="tel:+255622691910" style="background: #3b82f6; color: white;">
                 <i class="fa-solid fa-phone"></i>
             </a>
-                    <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
-            style="background: #e4405f; color: white;">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+            <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
+                style="background: #e4405f; color: white;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
     </div>
 
@@ -418,24 +481,25 @@
         }
 
         // Close lightbox with ESC key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === "Escape") closeLightbox();
         });
 
-            function togglePopup() {
-        const popup = document.getElementById('contactPopup');
-        popup.classList.toggle('show');
-    }
-    
-    // Click outside to close
-    document.addEventListener('click', function(event) {
-        const popup = document.getElementById('contactPopup');
-        const floatBtn = document.querySelector('.float-btn');
-        if (!popup.contains(event.target) && !floatBtn.contains(event.target) && popup.classList.contains('show')) {
-            popup.classList.remove('show');
+        function togglePopup() {
+            const popup = document.getElementById('contactPopup');
+            popup.classList.toggle('show');
         }
-    });
+
+        // Click outside to close
+        document.addEventListener('click', function (event) {
+            const popup = document.getElementById('contactPopup');
+            const floatBtn = document.querySelector('.float-btn');
+            if (!popup.contains(event.target) && !floatBtn.contains(event.target) && popup.classList.contains('show')) {
+                popup.classList.remove('show');
+            }
+        });
 
     </script>
 </body>
+
 </html>

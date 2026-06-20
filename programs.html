@@ -1,100 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Volunteer in Tanzania – Travel with Purpose, Leave a Positive Impact | Tanzania Travel Volunteer</title>
+    <title>Tanzania Travel Volunteer | Volunteer Programs, Cultural Exchange & Adventure Travel</title>
+    <meta name="description" content="Join Tanzania Travel Volunteer for affordable and meaningful volunteer opportunities.
+         Experience local culture, support communities, and explore Tanzania's wildlife, mountains, 
+         and beautiful landscapes.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        .tail-container { font-family: 'Poppins', sans-serif; }
+
+        .tail-container {
+            font-family: 'Poppins', sans-serif;
+        }
+
         .card-hover:hover {
             transform: translateY(-12px);
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
         }
+
         .nav-link {
             transition: all 0.3s ease;
         }
+
         .nav-link:hover {
             color: #16a34a;
             border-bottom: 2px solid #16a34a;
         }
 
-         .float-btn {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: #16a34a;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        z-index: 999;
-        transition: all 0.3s;
-    }
-    .float-btn:hover {
-        transform: scale(1.1);
-        background: #15803d;
-    }
-    .popup-box {
-        position: fixed;
-        bottom: 110px;
-        right: 30px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        padding: 20px 15px;
-        display: none;
-        z-index: 1000;
-        animation: fadeIn 0.3s ease;
-    }
-    .popup-box.show {
-        display: block;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .popup-icons {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        justify-content: center;
-    }
-    .popup-icons a {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        transition: all 0.3s;
-        text-decoration: none;
-    }
-    .popup-icons a:hover {
-        transform: scale(1.1);
-    }
-    .close-popup {
-        position: absolute;
-        top: 6px;
-        right: 12px;
-        cursor: pointer;
-        color: #999;
-        font-size: 18px;
-    }
-    .close-popup:hover {
-        color: #333;
-    }
+        .float-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #16a34a;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+            background: #15803d;
+        }
+
+        .popup-box {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px 15px;
+            display: none;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .popup-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 6px;
+            right: 12px;
+            cursor: pointer;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .close-popup:hover {
+            color: #333;
+        }
     </style>
 </head>
+
 <body class="tail-container bg-gray-50 text-gray-800">
 
     <!-- HEADER -->
@@ -106,19 +133,20 @@
                     <h1 class="text-sm md:text-2xl font-bold text-[#16a34a]">Tanzania Travel Volunteer</h1>
                 </div>
             </div>
-            
+
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="index.html" class="nav-link text-gray-700">Home</a>
                 <a href="about.html" class="nav-link text-gray-700">About Us</a>
                 <a href="programs.html" class="nav-link text-gray-700 font-semibold">Program</a>
                 <a href="donate.html" class="nav-link text-gray-700">Donation</a>
                 <a href="gallery.html" class="nav-link text-gray-700">Galleries</a>
-                 <a href="info-faq.html" class="nav-link text-gray-700">Info & FAQ</a>
+                <a href="info-faq.html" class="nav-link text-gray-700">Info & FAQ</a>
                 <a href="contact.html" class="nav-link text-gray-700">Contact Us</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="donate.html" class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
+                <a href="donate.html"
+                    class="bg-[#16a34a] hover:bg-[#15803d] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">Donate</a>
                 <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -151,13 +179,22 @@
     <section class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                Tanzania Travel Volunteer offers immersive volunteer programs in and around Moshi, Tanzania, providing opportunities to contribute to meaningful community development projects. Our programs focus on creating sustainable impact in areas such as education, healthcare, environmental conservation, and community empowerment.
+                Tanzania Travel Volunteer offers immersive volunteer programs in and around Moshi, Tanzania, providing
+                opportunities to contribute to meaningful community development projects. Our programs focus on creating
+                sustainable impact in areas such as education, healthcare, environmental conservation, and community
+                empowerment.
             </p>
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                Volunteers work alongside local communities, gaining firsthand experience of Tanzanian culture while making a real difference. We prioritize ethical and responsible volunteering, ensuring that our projects are community-led and aligned with local needs. Whether you're interested in teaching, healthcare, conservation, or other areas, Tanzania Travel Volunteer Tanzania provides a platform for a transformative and impactful volunteer experience in a beautiful and culturally rich setting.
+                Volunteers work alongside local communities, gaining firsthand experience of Tanzanian culture while
+                making a real difference. We prioritize ethical and responsible volunteering, ensuring that our projects
+                are community-led and aligned with local needs. Whether you're interested in teaching, healthcare,
+                conservation, or other areas, Tanzania Travel Volunteer Tanzania provides a platform for a
+                transformative and impactful volunteer experience in a beautiful and culturally rich setting.
             </p>
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                The Tanzania Travel Volunteer program in Moshi, Tanzania, offers participants a chance to engage in meaningful community service while experiencing the local culture. Here are some key points about the program:
+                The Tanzania Travel Volunteer program in Moshi, Tanzania, offers participants a chance to engage in
+                meaningful community service while experiencing the local culture. Here are some key points about the
+                program:
             </p>
         </div>
     </section>
@@ -169,37 +206,46 @@
                 <div class="bg-white p-8 rounded-3xl card-hover shadow-md">
                     <i class="fa-solid fa-location-dot text-4xl text-[#16a34a] mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">1. Location</h3>
-                    <p class="text-gray-600">The program is based in Moshi, a town at the foot of Mount Kilimanjaro, offering beautiful natural scenery and a rich cultural environment.</p>
+                    <p class="text-gray-600">The program is based in Moshi, a town at the foot of Mount Kilimanjaro,
+                        offering beautiful natural scenery and a rich cultural environment.</p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-3xl card-hover shadow-md">
                     <i class="fa-solid fa-hands-holding-child text-4xl text-[#16a34a] mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">2. Volunteer Opportunities</h3>
-                    <p class="text-gray-600">Participants can engage in various projects, including education, healthcare, women's empowerment, and community development. Specific tasks may include teaching, assisting in healthcare facilities, or participating in women's groups.</p>
+                    <p class="text-gray-600">Participants can engage in various projects, including education,
+                        healthcare, women's empowerment, and community development. Specific tasks may include teaching,
+                        assisting in healthcare facilities, or participating in women's groups.</p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-3xl card-hover shadow-md">
                     <i class="fa-solid fa-language text-4xl text-[#16a34a] mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">3. Cultural Immersion</h3>
-                    <p class="text-gray-600">Volunteers have the opportunity to immerse themselves in Tanzanian culture through home stays, local excursions, language lessons, and participation in cultural events.</p>
+                    <p class="text-gray-600">Volunteers have the opportunity to immerse themselves in Tanzanian culture
+                        through home stays, local excursions, language lessons, and participation in cultural events.
+                    </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-3xl card-hover shadow-md">
                     <i class="fa-solid fa-mountain text-4xl text-[#16a34a] mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">4. Adventure and Exploration</h3>
-                    <p class="text-gray-600">Being in close proximity to Mount Kilimanjaro and several national parks, volunteers can explore the natural beauty of Tanzania through hiking, safaris, and tours to surrounding areas.</p>
+                    <p class="text-gray-600">Being in close proximity to Mount Kilimanjaro and several national parks,
+                        volunteers can explore the natural beauty of Tanzania through hiking, safaris, and tours to
+                        surrounding areas.</p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-3xl card-hover shadow-md">
                     <i class="fa-solid fa-lightbulb text-4xl text-[#16a34a] mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">5. Skills and Impact</h3>
-                    <p class="text-gray-600">Volunteers can gain valuable skills in cross-cultural communication, project management, and leadership while making a meaningful impact in local communities.</p>
+                    <p class="text-gray-600">Volunteers can gain valuable skills in cross-cultural communication,
+                        project management, and leadership while making a meaningful impact in local communities.</p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-3xl card-hover shadow-md">
                     <i class="fa-solid fa-shield-halved text-4xl text-[#16a34a] mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">6. Support and Guidance</h3>
-                    <p class="text-gray-600">The program typically offers comprehensive support to volunteers, including pre-departure information, on-site coordination, and emergency assistance.</p>
+                    <p class="text-gray-600">The program typically offers comprehensive support to volunteers, including
+                        pre-departure information, on-site coordination, and emergency assistance.</p>
                 </div>
             </div>
         </div>
@@ -211,7 +257,9 @@
             <div class="bg-amber-50 rounded-2xl p-8 border-l-4 border-amber-500">
                 <i class="fa-solid fa-info-circle text-3xl text-amber-600 mb-3"></i>
                 <p class="text-gray-700 text-lg leading-relaxed">
-                    Participants should be prepared for flexible work environments and open to adapting to different cultural norms. Such programs often require a commitment to understanding and respecting local traditions and practices.
+                    Participants should be prepared for flexible work environments and open to adapting to different
+                    cultural norms. Such programs often require a commitment to understanding and respecting local
+                    traditions and practices.
                 </p>
             </div>
         </div>
@@ -221,13 +269,15 @@
     <section class="py-20 bg-white text-center">
         <div class="max-w-2xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-[#1e3a5f] mb-6">Ready to Make a Difference?</h2>
-            <p class="text-lg text-gray-600 mb-8">Join our volunteer program and create memories that last a lifetime.</p>
-            <a href="contact.html" class="inline-block bg-[#16a34a] hover:bg-[#15803d] text-white px-10 py-4 rounded-full text-lg font-semibold transition shadow-md">
+            <p class="text-lg text-gray-600 mb-8">Join our volunteer program and create memories that last a lifetime.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-[#16a34a] hover:bg-[#15803d] text-white px-10 py-4 rounded-full text-lg font-semibold transition shadow-md">
                 Apply Now <i class="fa-solid fa-arrow-right ml-2"></i>
             </a>
         </div>
     </section>
- 
+
     <!-- FOOTER -->
     <footer class="bg-[#1e3a5f] text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
@@ -238,7 +288,7 @@
                 </div>
                 <p class="text-gray-300">Travel with purpose. Leave a positive impact.</p>
             </div>
-            
+
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
                 <div class="flex flex-col gap-2 text-gray-300">
@@ -247,18 +297,20 @@
                     <a href="programs.html" class="hover:text-white transition">Program</a>
                     <a href="donate.html" class="hover:text-white transition">Donation</a>
                     <a href="gallery.html" class="hover:text-white transition">Galleries</a>
-                     <a href="info-faq.html" class="hover:text-white transition">Info & FAQ</a>
+                    <a href="info-faq.html" class="hover:text-white transition">Info & FAQ</a>
                     <a href="contact.html" class="hover:text-white transition">Contact Us</a>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="font-semibold mb-4 text-lg">Contact Info</h4>
                 <div class="space-y-3 text-gray-300">
-                    <a href="mailto:umojavolunteertanzania@gmail.com" class="flex items-center gap-3 hover:text-white transition">
+                    <a href="mailto:umojavolunteertanzania@gmail.com"
+                        class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-envelope"></i> tanzaniatravelvolunteer@gmail.com
                     </a>
-                    <a href="https://wa.me/255622691910?text=Hello" class="flex items-center gap-3 hover:text-white transition">
+                    <a href="https://wa.me/255622691910?text=Hello"
+                        class="flex items-center gap-3 hover:text-white transition">
                         <i class="fa-solid fa-phone"></i> +255 622 691 910
                     </a>
                     <div class="flex items-start gap-3">
@@ -267,46 +319,43 @@
                     </div>
                 </div>
             </div>
-            
-             <div>
-            <h4 class="font-semibold mb-4 text-lg ml-8">Follow Us</h4>
 
-            <div class="flex items-center gap-4 text-2xl">
+            <div>
+                <h4 class="font-semibold mb-4 text-lg ml-8">Follow Us</h4>
 
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/tanzaniaheartvolunteer"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition ml-6">
+                <div class="flex items-center gap-4 text-2xl">
 
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/tanzaniaheartvolunteer" target="_blank"
+                        class="hover:text-[#16a34a] transition ml-6">
 
-                <!-- WhatsApp -->
-                <a href="https://wa.me/255622691910?text=Hello"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/255622691910?text=Hello" target="_blank"
+                        class="hover:text-[#16a34a] transition">
 
-                 <!-- WhatsApp -->
-                <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25"
-                    target="_blank"
-                    class="hover:text-[#16a34a] transition">
-                   <i class="fa-brands fa-instagram"></i>
-                </a>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
 
+                    <!-- WhatsApp -->
+                    <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
+                        class="hover:text-[#16a34a] transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
             </div>
-        </div>
         </div>
         <div class="text-center text-gray-400 text-sm mt-16 border-t border-gray-700 pt-8">
             © 2026 Tanzania Travel Volunteer Organization. All Rights Reserved.
         </div>
     </footer>
 
-       <!-- Popup Box -->
-     <div class="float-btn" onclick="togglePopup()">
-    <i class="fa-regular fa-message text-white text-2xl"></i>
+    <!-- Popup Box -->
+    <div class="float-btn" onclick="togglePopup()">
+        <i class="fa-regular fa-message text-white text-2xl"></i>
     </div>
     <div id="contactPopup" class="popup-box">
         <span class="close-popup" onclick="togglePopup()"></span>
@@ -322,10 +371,10 @@
             <a href="tel:+255622691910" style="background: #3b82f6; color: white;">
                 <i class="fa-solid fa-phone"></i>
             </a>
-                    <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
-            style="background: #e4405f; color: white;">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+            <a href="https://www.instagram.com/tanzaniaheartvolunteer?igsh=YzljYTk1ODg3Zg%25" target="_blank"
+                style="background: #e4405f; color: white;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
     </div>
 
@@ -334,7 +383,7 @@
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-   function togglePopup() {
+        function togglePopup() {
             const popup = document.getElementById('contactPopup');
             popup.classList.toggle('show');
         }
@@ -349,4 +398,5 @@
         });
     </script>
 </body>
+
 </html>
